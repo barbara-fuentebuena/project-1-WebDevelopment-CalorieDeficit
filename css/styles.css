@@ -1,0 +1,538 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header ----------------------------------*/
+header nav{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border: rgb(220, 217, 217) solid;
+}
+
+.logo img{
+    display: block;
+    width: 7rem;
+    margin-left: 30%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin-right: 6%;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1.2;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    padding-inline: 7px;
+}
+nav ul a:hover{
+    background-color: #2de1c2;
+    padding: 5px;
+    color: rgb(70, 69, 69);
+}
+
+.separation{
+    color: black;
+}
+ul ul{
+    display: none;
+    position: absolute;
+}
+
+ul li:hover ul{
+    display: block;
+    background-color: #2de1c2;
+    color: rgb(70, 69, 69);
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    padding: 0.7%;
+    width: max-content;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    position: fixed;
+    right: 2%;
+    cursor: pointer;
+    display: none;
+    padding: 2%;
+    background-color: #2de1c2;
+}
+#check{
+    display: none;
+}
+
+
+/*main ------------------------------------*/
+main {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat (6, 1fr);
+    grid-template-rows: repeat (5, 1fr);
+    grid-template-areas:
+    "banner banner banner banner banner banner"
+    "recipes recipes recipes recipes recipes recipes"
+    "cat1 cat1 cat2 cat2 cat3 cat3"
+    "newsletter newsletter newsletter newsletter newsletter newsletter"
+    "news news news news news news";
+}
+.banner{
+    grid-area: banner;
+    background-image: url("../img/banner2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 500px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    background-color:white;
+    width: 500px;
+    padding: 20px;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:5px;
+}
+h1{
+    font-family:'Roboto', sans-serif;
+    font-size: 4rem;
+    color: black;
+    text-align: center;
+}
+.banner button{
+    background-color: black;
+    border: none;
+    width: fit-content;
+    align-self: center;
+    margin-top: 10%;
+    padding: 10px;
+    border-radius: 7px;
+}
+.banner button a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    flex-wrap: nowrap;
+    font-weight: lighter;
+}
+.banner button:hover{
+    background-color: rgb(111, 20, 237);
+}
+
+/**Recipes categories home**/
+
+.recipes{
+    grid-area: recipes;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    background-color: none;
+}
+h2{
+    font-family:'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: normal;
+}
+.cat1{
+    height: auto;
+    grid-area: cat1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #03e3be;
+    padding: 15%;
+    margin: 12px;
+    transition: all 0.2s ease;
+}
+.cat2{
+    height: auto;
+    grid-area: cat2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #019980;
+    padding: 15%;
+    margin: 12px;
+    transition: all 0.2s ease;
+}
+.cat3{
+    height: auto;
+    grid-area: cat3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #005648;
+    padding: 15%;
+    margin: 12px;
+    transition: all 0.2s ease;
+}
+.cat1:hover{
+    background-color: rgb(111, 20, 237);
+    transform: scale(1.08);
+}
+.cat2:hover{
+    background-color: rgb(111, 20, 237);
+    transform: scale(1.08);
+}
+.cat3:hover{
+    background-color: rgb(111, 20, 237);
+    transform: scale(1.08);
+}
+
+/*Newsletter----------------------------*/
+.newsletter{
+    height: auto;
+    grid-area: newsletter;
+    padding: 5%;
+}
+#newsletter{
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    padding: 2%;
+    color: black;
+    font-weight: lighter;
+    font-family:'Roboto', sans-serif;
+}
+h3{
+    font-size: 3rem;
+    color: black;
+    font-weight: bold;
+
+}
+
+.containernews2 input{
+    margin-inline: 1.3rem;
+    margin-top: 1.5%;
+    border: double;
+    border-color: #019980;
+    padding: 0.5rem;
+    width: 17rem;
+    background-color: white;
+}
+.containernews3 input{
+    margin-top: 3%;
+    font-size: 1rem;
+    background-color: #019980;
+    border-radius: 7px;
+    border: none;
+    color:  white;
+    padding: 0.8rem;
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.containernews3 input:hover{
+    background-color: rgb(111, 20, 237);
+    color: white;
+}
+
+/*Banner for any new recipe or updates--------------------*/
+
+.news{
+    display:flex;
+    height:600px;
+    grid-area: news;
+}
+.news1{
+    background-image: url("../img/cookies.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 600px;
+    width: 50%;
+}
+
+.news2{
+    background-color: #019980;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+.news2 h3,h4,p{
+    padding: 10px;
+    font-family:'Roboto', sans-serif;
+}
+.news2 h2{
+    color: black;
+    background-color: yellow;
+    width: fit-content;
+    font-family:'Roboto', sans-serif;
+    margin: auto;
+    padding: 7px;
+    animation-name: new;
+    animation-iteration-count: infinite;
+    animation-duration: 0.3s;
+}
+.news2 h3{
+    color: white;
+}
+.news h4{
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: normal;
+}
+.news3{
+    display: none;
+}
+.buttons{
+    padding: 20px;
+}
+.button1,.button2{
+    padding:10px;
+    text-decoration:none;
+    font-family:'Roboto', sans-serif;
+}
+.button1{
+    background-color: white;
+    color: rgb(111, 20, 237);
+    border-radius:5px;
+    font-weight: bold;
+}
+.button2{
+    background-color: rgb(111, 20, 237);
+    color: white;
+    border-radius:5px;
+    font-weight: bold;
+}
+.button1:hover{
+    background-color: black;
+    color: white;
+}
+.button2:hover{
+    background-color: black;
+}
+
+/*footer-------------------------------*/
+
+/** Social media icons footer**/
+.social{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social img{
+      width: 4rem;
+      padding-inline: 1rem;
+      margin-top: 10%;
+      margin-bottom: 15%;
+  }
+  
+  h5{
+      font-family:'Roboto', sans-serif;
+      font-weight: normal;
+      display: flex;
+      justify-content: center;
+      font-size: 1rem;
+      padding-top: 4rem;
+      padding-bottom: 1.5rem;
+  }
+
+/*landing what is a calorie deficit*/
+
+.mainCD{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: 
+    "info info info info calculator calculator"
+    "recipes2 recipes2 recipes2 recipes2 recipes2 recipes2"
+    "cat1 cat1 cat2 cat2 cat3 cat3";
+}
+.info{
+    grid-area: info;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    font-family:'Roboto', sans-serif;
+}
+.info img{
+    height: 400px;
+    padding: 25px;
+}
+.calculator{
+    grid-area: calculator;
+    background-color: rgb(111, 20, 237);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-family:'Roboto', sans-serif;
+    color: white;
+}
+.calculator h4{
+    font-size: 2rem;
+}
+.calculator form{
+    text-align: start;
+}
+aside form{
+    display: flex;
+    flex-direction: column;
+}
+form p{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.calcCD{
+    background-color: yellow;
+    padding: 10px;
+    font-family:'Roboto', sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.recipes2{
+    grid-area: recipes2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    height: 130px;
+}
+
+
+/*responsive----------------------------*/
+
+/*responsive tablet horizontal */
+@media screen and (max-width: 934px){
+    .checkbtn{
+        display: block;
+        margin: auto;
+    }
+    ul{
+        position: fixed;
+        height: fit-content;
+        width: 100%;
+        left: 100%;
+        top: 80px;
+        text-align: center;
+        transition: all .5s;
+        background-color: #03e3be;
+    }
+    .separation{
+        display: none;
+    }
+    nav ul li{
+        display: block;
+        margin: 0px 0;
+        padding: 0.5%;
+    }
+    nav ul li a:hover{
+        background-color: #038872;
+        width: 100%;
+        color: white;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+        flex-direction: column;
+    }
+    main {
+        grid-template-columns: repeat (2, 1fr);
+        grid-template-rows: repeat (8, 1fr);
+        grid-template-areas:
+        "banner banner"
+        "recipes recipes"
+        "cat1 cat1"
+        "cat2 cat2"
+        "cat3 cat3"
+        "newsletter newsletter"
+        "news news"
+        "news news"
+    }
+    .recipes{
+        padding: 5%;
+    }
+    .cat1,.cat2,.cat3{
+        margin: 15px;
+    }
+    .news{
+        flex-direction: column;
+        height: auto;
+        grid-area: news;
+    }
+    .news1{
+        display: none;
+    }
+    .news3{
+        display: flex;
+        background-color: #019980;
+        align-items: center;
+        justify-content: center;
+    }
+    .news3 img{
+        width: 350px;
+        height: 350px;
+        padding: 10px;
+    }
+    .news2{
+        width: 100%;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+/*responsive tablet horizontal */
+@media screen and (max-width: 768px){
+    .mainCD{
+       display: block;
+    }
+}
+
+/*responsive mobile*/
+@media screen and (max-width: 380px){
+    .title{
+        width: 300px;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        text-align: center;
+        padding: 20px;
+        font-weight: normal;
+    }
+}
+
+/* animations---------------------------------*/
+
+@keyframes new{
+    0%{background-color: yellow;}
+    25%{background-color: rgb(249, 230, 137);}
+    50%{background-color: rgb(249, 187, 29);}
+    75%{background-color: rgb(226, 218, 7);}
+    100%{background-color: yellow;}
+}
