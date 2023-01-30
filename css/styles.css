@@ -5,12 +5,14 @@
 }
 
 /*header ----------------------------------*/
+
 header nav{
     display: flex;
     padding: 10px;
     align-items: center;
     justify-content: space-between;
     border: rgb(220, 217, 217) solid;
+    z-index: 100;
 }
 
 .logo img{
@@ -33,9 +35,9 @@ nav ul a{
     padding-inline: 7px;
 }
 nav ul a:hover{
-    background-color: #2de1c2;
+    background-color: rgb(88, 15, 190);
     padding: 5px;
-    color: rgb(70, 69, 69);
+    color: white;
 }
 
 .separation{
@@ -44,27 +46,29 @@ nav ul a:hover{
 ul ul{
     display: none;
     position: absolute;
+    z-index: 100
+}
+ul ul li a{
+    color: white;
 }
 
 ul li:hover ul{
     display: block;
-    background-color: #2de1c2;
-    color: rgb(70, 69, 69);
+    background-color: rgb(111, 20, 237);
     font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
     padding: 0.7%;
     width: max-content;
 }
 
 .checkbtn{
     font-size: 30px;
-    color: black;
+    color: white;
     position: fixed;
     right: 2%;
     cursor: pointer;
     display: none;
     padding: 2%;
-    background-color: #2de1c2;
+    background-color: rgb(111, 20, 237);
 }
 #check{
     display: none;
@@ -72,7 +76,7 @@ ul li:hover ul{
 
 
 /*main ------------------------------------*/
-main {
+.container {
     display: grid;
     margin: auto;
     grid-template-columns: repeat (6, 1fr);
@@ -92,6 +96,7 @@ main {
     background-size: cover;
     position: relative;
     min-height: 500px;
+    z-index: -15;
 }
 .title{
     display: flex;
@@ -155,7 +160,7 @@ h2{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #03e3be;
+    background-color: #019980;
     padding: 15%;
     margin: 12px;
     transition: all 0.2s ease;
@@ -179,21 +184,21 @@ h2{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #005648;
+    background-color: #019980;
     padding: 15%;
     margin: 12px;
     transition: all 0.2s ease;
 }
 .cat1:hover{
-    background-color: rgb(111, 20, 237);
+    background-color: #005648;
     transform: scale(1.08);
 }
 .cat2:hover{
-    background-color: rgb(111, 20, 237);
+    background-color: #005648;
     transform: scale(1.08);
 }
 .cat3:hover{
-    background-color: rgb(111, 20, 237);
+    background-color: #005648;
     transform: scale(1.08);
 }
 
@@ -330,6 +335,12 @@ h3{
 /*footer-------------------------------*/
 
 /** Social media icons footer**/
+
+.footer{
+    background-color: rgb(249, 247, 247);
+    padding-top: 1rem;
+    margin-top: 4rem;
+}
 .social{
     display: flex;
     justify-content: center;
@@ -348,7 +359,6 @@ h3{
       display: flex;
       justify-content: center;
       font-size: 1rem;
-      padding-top: 4rem;
       padding-bottom: 1.5rem;
   }
 
@@ -378,7 +388,9 @@ h3{
 }
 .calculator{
     grid-area: calculator;
-    background-color: rgb(111, 20, 237);
+    margin: 10px;
+    background: rgb(208,180,247);
+    background: linear-gradient(319deg, rgba(208,180,247,1) 17%, rgba(167,112,244,1) 45%, rgba(134,56,244,1) 75%, rgba(111,20,237,1) 100%);
     height: auto;
     display: flex;
     flex-direction: column;
@@ -390,6 +402,8 @@ h3{
 }
 .calculator h4{
     font-size: 2rem;
+    margin: 10px;
+    margin-bottom: 80px;
 }
 .calculator form{
     text-align: start;
@@ -404,11 +418,17 @@ form p{
 }
 .calcCD{
     background-color: yellow;
-    padding: 10px;
+    padding: 15px;
+    font-size: 1rem;
     font-family:'Roboto', sans-serif;
+    border: none;
     border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 40px;
+}
+.calcCD:hover{
+    cursor: pointer;
 }
 .recipes2{
     grid-area: recipes2;
@@ -417,6 +437,251 @@ form p{
     justify-content: center;
     padding: 10px;
     height: 130px;
+}
+
+/*landing recipes*/
+
+.mainR{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat (3, auto);
+    grid-template-areas:
+    "block1 block2"
+    "block3 block4"
+    "block5 block6";
+    gap: 20px;
+    margin: 20px;
+}
+.block1{
+    background-color: #019980;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.allRecipes{
+    color: white;
+    font-family:'Roboto', sans-serif;
+    padding: 20px;
+}
+.allRecipes:hover{
+    color: rgb(111, 20, 237);
+}
+.block2,.block3,.block6{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ;
+    padding: 10px;
+}
+.block2inside{
+    width: 50%;
+    border: grey 0.5px dotted;
+    box-shadow: 3px 3px 3px rgb(203, 203, 203);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.block2inside img{
+    width: 200px;
+}
+.block2inside h2{
+     padding: 10px;
+}
+.block3inside{
+    width: 50%;
+    border: grey 0.5px dotted;
+    box-shadow: 3px 3px 3px rgb(203, 203, 203);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.block3inside img{
+    width: 200px;
+}
+.block3inside h2{
+     padding: 10px;
+}
+.block6inside{
+    width: 50%;
+    border: grey 0.5px dotted;
+    box-shadow: 3px 3px 3px rgb(203, 203, 203);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.block6inside img{
+    width: 200px;
+}
+.block6inside h2{
+     padding: 10px;
+}
+.infoProtein{
+    background-color: rgb(250, 225, 117);
+    text-align: center;
+    margin: 5px;
+}
+.infoFat{
+    background-color: rgb(249, 152, 249);
+    text-align: center;
+    margin: 5px;
+}
+.infoCarbs{
+    background-color: rgb(127, 245, 223);
+    text-align: center;
+    margin: 5px;
+}
+.infoRecipes{
+    width: 95%;
+}
+.block4{
+    background-color: #019980;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.block5{
+    background-color: #019980;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hiddenR{
+    display: none;
+}
+.allRecipesResponsive{
+    display: none;
+}
+
+/*landing nutritional information*/
+
+.nutriInfo{
+    text-align: justify;
+    margin: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+.nutriInfo h1{
+    margin: 40px;
+}
+.info1{
+    display: flex;
+}
+.info1 img{
+    width: 30%;
+    margin: auto;
+}
+.infoMacros{
+    margin-top: 40px;
+}
+.infoMacros h2{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.protein{
+    background-color: rgb(250, 225, 117);
+    display: flex;
+    padding: 30px;
+    margin-block: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.protein h2{
+    font-weight: bold;
+    padding: 10px;
+}
+.carbs{
+    background-color: rgb(127, 245, 223);
+    display: flex;
+    padding: 30px;
+    margin-block: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.carbs h2{
+    font-weight: bold;
+    padding: 10px;
+}
+.fats{
+    background-color: rgb(249, 152, 249);
+    display: flex;
+    padding: 30px;
+    margin-block: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.fats h2{
+    font-weight: bold;
+    padding: 10px;
+}
+
+/*landing calculator*/
+.calculator h4{
+    margin: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: left;
+}
+.form1{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 40px;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    padding: 50px;
+    margin: 10px;
+    text-overflow: none;
+    line-height: 1.5;
+}
+.result h3{
+    padding: 5px;
+}
+.resultCal{
+    background-color: yellow;
+    height: 1rem;
+    padding: 5px;
+}
+.faqs{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.faqAll{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.question{
+    padding: 10px;
+    margin: 5px;
+    border: 0.5px solid rgb(232, 230, 230);
+    border-radius: 10px;
+    width: max-content;
+    background-color: whitesmoke;
 }
 
 
@@ -436,29 +701,28 @@ form p{
         top: 80px;
         text-align: center;
         transition: all .5s;
-        background-color: #03e3be;
+        background-color: rgb(111, 20, 237);
     }
     .separation{
         display: none;
     }
     nav ul li{
         display: block;
-        margin: 0px 0;
-        padding: 0.5%;
+        margin: 3px;
     }
-    nav ul li a:hover{
-        background-color: #038872;
-        width: 100%;
+    nav ul li:hover{
+        background-color: rgb(81, 13, 175);
         color: white;
     }
     nav ul li a{
         font-size: 20px;
+        color: white;
     }
     #check:checked ~ ul{
         left: 0;
         flex-direction: column;
     }
-    main {
+    .container {
         grid-template-columns: repeat (2, 1fr);
         grid-template-rows: repeat (8, 1fr);
         grid-template-areas:
@@ -503,12 +767,69 @@ form p{
         display: flex;
         flex-direction: column;
     }
+    .block1,.block2,.block3,.block4,.block5,.block6{
+        height: 300px;
+    }
+    .info1{
+        display: block;
+    }
+    .info1 img{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+    .protein{
+        display: block;
+    }
+    .carbs{
+        display: block;
+    }
+    .fats{
+        display: block;
+    }
+    .block2inside{
+        width: 90%;
+    }
+    .block2inside img{
+        width: 100px;
+    }
+    .infoRecipes{
+        display: flex;
+    }
+    .block3inside{
+        width: 90%;
+    }
+    .block3inside img{
+        width: 100px;
+    }
+    .block6inside{
+        width: 90%;
+    }
+    .block6inside img{
+        width: 100px;
+    }
+    .resultList{
+        position: relative;
+        left: auto;
+        top: auto;
+        background-color: white;
+        text-align: start;
+    }
 
 }
 /*responsive tablet horizontal */
 @media screen and (max-width: 768px){
     .mainCD{
        display: block;
+    }
+    .calculator{
+        border-radius: 0px;
+        width: 100%;
+    }
+    .form1{
+        display: flex;
+        flex-direction: column;
+        margin-inline: 20px;
     }
 }
 
@@ -524,6 +845,78 @@ form p{
         text-align: center;
         padding: 20px;
         font-weight: normal;
+    }
+    .mainR{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (6, auto);
+        grid-template-areas:
+        "block1"
+        "block2"
+        "block4"
+        "block3"
+        "block5" 
+        "block6";
+        gap: 10px;
+        margin: 10px;
+    }
+    .block1{order:1}
+    .block2{order:2}
+    .block4{order:3}
+    .block3{order:4}
+    .block5{order:5}
+    .block6{order:6}
+    .block1,.block4,.block5{
+        height: 50px;
+    }
+    .block1 img{
+        display: none;
+    }
+    .block4 img{
+        display: none;
+    }
+    .block5 img{
+        display: none;
+    }
+    .hiddenR{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .nutriInfo{
+        margin: 3%;
+    }
+    .nutriInfo h1{
+        margin: 3%;
+    }
+    .info1{
+        display: block;
+    }
+    .info1 img{
+        width: 80%;
+    }
+    .allRecipes{
+        display: none;
+    }
+    .allRecipesResponsive{
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        margin: 10px;
+        color: black;
+    }
+    .allRecipesResponsive:hover{
+        color: rgb(111, 20, 237);
+    }
+    .block2,.block3,.block6{
+        display: flex;
+        flex-direction: column;
+    }
+    .calculator{
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        display: block;
     }
 }
 
