@@ -11,34 +11,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,500;1,700&family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header>
         <!--Nav menu-->
         <nav>
-            <div class="logo"><a href="./index.html"><img src="./img/logoblack.png" alt="Logo" id="logo"></a></div>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-              <i class="fas fa-bars"></i>
-            </label>
-            <ul>
-                <li><a href="./pages/caloriedeficit.html" class="text">What is a calorie deficit</a></li>
-                <li><h class="separation">|</h></li>
-                <li><a href="./pages/recipes.html" class="text">Recipes</a></li>
-                <li><h class="separation">|</h></li>
-                <li><a href="./pages/nutritionalinfo.html" class="text">Nutritional information</a></li>
-                <li><h class="separation">|</h></li>
-                <li><a href="./pages/calculator.html" class="text">Calculator</a></li>
-                <li><h class="separation">|</h></li>
-                <li><a href="./pages/shop.html" class="text">Shop</a>
-                    <ul class="subnav">
-                        <li><a href="./pages/shop/wheyprotein.html">Whey Protein</a></li>
-                        <li><a href="./pages/shop/shakers.html">Shakers</a></li>
-                        <li><a href="./pages/shop/scales.html">BMI Scales</a></li>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand logo" href="./index.html">
+                    <img src="./img/logoblack.png" alt="logo">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./pages/caloriedeficit.html">What is a calorie deficit?</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Recipes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./pages/recipes-lowcalories.html">Low calories</a></li>
+                            <li><a class="dropdown-item" href="./pages/recipes-highprotein.html">High Protein</a></li>
+                            <li><a class="dropdown-item" href="./pages/recipes-lowfat.html">Low fat</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/nutritionalinfo.html">Nutritional information</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./pages/calculator.html">Calculator</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Shop
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="./pages/shop.html">Shaker</a></li>
+                          <li><a class="dropdown-item" href="./pages/shop.html">Whey Protein</a></li>
+                          <li><a class="dropdown-item" href="./pages/shop.html">BMI Scales</a></li>
+                        </ul>
+                      </li>
                     </ul>
-                </li>
-            </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
         </nav>
     </header>
     <main class="container">
@@ -114,5 +140,6 @@
             <a href="http://www.youtube.com"><img src="./img/youtubelogo.png" alt="Youtube"></a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
