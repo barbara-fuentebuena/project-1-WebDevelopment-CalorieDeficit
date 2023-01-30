@@ -10,67 +10,65 @@
     width: 7rem;
 }
 
-
 /*main ------------------------------------*/
 
-.container {
-    display: grid;
-    margin: auto;
-    grid-template-columns: repeat (6, 1fr);
-    grid-template-rows: repeat (5, 1fr);
-    grid-template-areas:
-    "banner banner banner banner banner banner"
-    "recipes recipes recipes recipes recipes recipes"
-    "cat1 cat1 cat2 cat2 cat3 cat3"
-    "newsletter newsletter newsletter newsletter newsletter newsletter"
-    "news news news news news news";
-}
-.banner{
-    grid-area: banner;
-    background-image: url("../img/banner2.jpeg");
+.banner1{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     min-height: 500px;
-    z-index: -15;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner3.jpeg");
+}
+.banner2{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/whey-protein-banner.jpeg");
 }
 .title{
-    display: flex;
-    flex-direction: column;
     position:absolute;
-    background-color:white;
-    width: 500px;
     padding: 20px;
-    top: 53%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius:5px;
 }
+.title__button{
+    background-color: #019980;
+    color: white;
+    text-align: center;
+}
+.button-shop{
+    background-color: yellow;
+    color: black;
+}
+.title__button:hover{
+    background-color: rgb(111, 20, 237);
+    color: white;
+}
 h1{
     font-family:'Roboto', sans-serif;
     font-size: 4rem;
-    color: black;
+    font-weight: bolder;
+    color: white;
     text-align: center;
 }
-.banner button{
-    background-color: black;
-    border: none;
-    width: fit-content;
-    align-self: center;
-    margin-top: 10%;
-    padding: 10px;
-    border-radius: 7px;
-}
-.banner button a{
-    color: white;
+.title__button{
     text-decoration: none;
     font-size: 1rem;
-    flex-wrap: nowrap;
-    font-weight: lighter;
 }
-.banner button:hover{
-    background-color: rgb(111, 20, 237);
+.container {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat (6, 1fr);
+    grid-template-rows: repeat (3, 1fr);
+    grid-template-areas:
+    "recipes recipes recipes recipes recipes recipes"
+    "cat1 cat1 cat2 cat2 cat3 cat3"
+    "newsletter newsletter newsletter newsletter newsletter newsletter";
 }
 
 /**Recipes categories home**/
@@ -143,7 +141,7 @@ h2{
 .newsletter{
     height: auto;
     grid-area: newsletter;
-    padding: 5%;
+    padding: 3%;
 }
 #newsletter{
     background-color: white;
@@ -187,95 +185,15 @@ h3{
     color: white;
 }
 
-/*Banner for any new recipe or updates--------------------*/
-
-.news{
-    display:flex;
-    height:600px;
-    grid-area: news;
-}
-.news1{
-    background-image: url("../img/cookies.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    min-height: 600px;
-    width: 50%;
-}
-
-.news2{
-    background-color: #019980;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
-    color: white;
-}
-.news2 h3,h4,p{
-    padding: 10px;
-    font-family:'Roboto', sans-serif;
-}
-.news2 h2{
-    color: black;
-    background-color: yellow;
-    width: fit-content;
-    font-family:'Roboto', sans-serif;
-    margin: auto;
-    padding: 7px;
-    animation-name: new;
-    animation-iteration-count: infinite;
-    animation-duration: 0.3s;
-}
-.news2 h3{
-    color: white;
-}
-.news h4{
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: normal;
-}
-.news3{
-    display: none;
-}
-.buttons{
-    padding: 20px;
-}
-.button1,.button2{
-    padding:10px;
-    text-decoration:none;
-    font-family:'Roboto', sans-serif;
-}
-.button1{
-    background-color: white;
-    color: rgb(111, 20, 237);
-    border-radius:5px;
-    font-weight: bold;
-}
-.button2{
-    background-color: rgb(111, 20, 237);
-    color: white;
-    border-radius:5px;
-    font-weight: bold;
-}
-.button1:hover{
-    background-color: black;
-    color: white;
-}
-.button2:hover{
-    background-color: black;
-}
 /*footer-------------------------------*/
 
 /** Social media icons footer**/
 
 .footer{
-    background-color: rgb(249, 247, 247);
-    padding-top: 1rem;
-    margin-top: 4rem;
+    background-color: rgb(71, 69, 69);
+    color: white;
+    padding-top: 15px;
+    margin-top: 5px;
 }
 .social{
     display: flex;
@@ -645,12 +563,4 @@ form p{
     }
 }
 
-/* animations---------------------------------*/
 
-@keyframes new{
-    0%{background-color: yellow;}
-    25%{background-color: rgb(249, 230, 137);}
-    50%{background-color: rgb(249, 187, 29);}
-    75%{background-color: rgb(226, 218, 7);}
-    100%{background-color: yellow;}
-}
