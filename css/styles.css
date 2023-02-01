@@ -668,6 +668,7 @@ form p{
     .calculator{
         display: flex;
         flex-direction: column;
+        margin: 0;
     }
     .form{
         display: block;
@@ -675,7 +676,7 @@ form p{
 }
 
 /*responsive mobile*/
-@media screen and (max-width: 400px){
+@media screen and (max-width: 428px){
     .title{
         width: 300px;
     }
