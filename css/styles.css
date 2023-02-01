@@ -676,10 +676,10 @@ form p{
     .recipes__cards__lowcalories{
         display: block;
         margin: auto;
-        padding: 0;
+        padding: 20px;
     }
     .card{
-        margin-top: 10px;
+        margin-top: 20px;
     }
     .text__recipes{
         margin: auto;
@@ -689,6 +689,12 @@ form p{
         flex-direction: column;
         align-items: center;
      }
+     .landing__recipes{
+        height: 200px;
+        width: 320px;
+        margin: 15px;
+        padding: 0px;
+    }
 }
 
 /*responsive mobile*/
