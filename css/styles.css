@@ -60,9 +60,12 @@ h1{
     text-decoration: none;
     font-size: 1rem;
 }
-.container {
+
+/**Recipes categories home**/
+
+.container1{
+    margin: 50px;
     display: grid;
-    margin: auto;
     grid-template-columns: repeat (6, 1fr);
     grid-template-rows: repeat (3, 1fr);
     grid-template-areas:
@@ -70,23 +73,16 @@ h1{
     "cat1 cat1 cat2 cat2 cat3 cat3"
     "newsletter newsletter newsletter newsletter newsletter newsletter";
 }
-
-/**Recipes categories home**/
-
 .recipes{
     grid-area: recipes;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2%;
-    background-color: none;
 }
-h2{
+.recipes h2{
     font-family:'Roboto', sans-serif;
     font-size: 1.5rem;
     color: black;
     font-weight: normal;
+    text-align: center;
+    padding: 2%;
 }
 .cat1{
     height: auto;
@@ -171,8 +167,7 @@ h3{
 .containernews3 input{
     margin-top: 3%;
     font-size: 1rem;
-    background-color: #019980;
-    border-radius: 7px;
+    background-color: grey;
     border: none;
     color:  white;
     padding: 0.8rem;
@@ -190,10 +185,9 @@ h3{
 /** Social media icons footer**/
 
 .footer{
-    background-color: rgb(71, 69, 69);
-    color: white;
+    border-top: rgb(177, 176, 176) 1px solid;
+    color: black;
     padding-top: 15px;
-    margin-top: 5px;
 }
 .social{
     display: flex;
@@ -220,6 +214,7 @@ h3{
 
 .mainCD{
     display: grid;
+    margin: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr auto auto;
     grid-template-areas: 
@@ -237,14 +232,22 @@ h3{
     font-family:'Roboto', sans-serif;
 }
 .info img{
-    height: 400px;
+    height: 600px;
     padding: 25px;
+}
+.info p{
+    text-align: justify;
 }
 .calculator{
     grid-area: calculator;
     margin: 10px;
-    background: rgb(208,180,247);
-    background: linear-gradient(319deg, rgba(208,180,247,1) 17%, rgba(167,112,244,1) 45%, rgba(134,56,244,1) 75%, rgba(111,20,237,1) 100%);
+    background: rgb(245, 245, 105);
+    background-image: url(../img/background-yellow.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: rgb(93, 92, 92);
     height: auto;
     display: flex;
     flex-direction: column;
@@ -252,12 +255,12 @@ h3{
     text-align: center;
     padding: 10px;
     font-family:'Roboto', sans-serif;
-    color: white;
 }
 .calculator h4{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight:900;
     margin: 10px;
-    margin-bottom: 80px;
+    padding-bottom: 50px;
 }
 .calculator form{
     text-align: start;
@@ -271,18 +274,20 @@ form p{
     font-size: 1.2rem;
 }
 .calcCD{
-    background-color: yellow;
+    border: 2px solid black;
+    background-color: transparent;
+    color: rgb(93, 92, 92);
     padding: 15px;
     font-size: 1rem;
     font-family:'Roboto', sans-serif;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px grey;
     font-weight: bold;
     margin-top: 40px;
 }
 .calcCD:hover{
     cursor: pointer;
+    background-color: rgb(111, 20, 237);
+    color: white;
+    border: none;
 }
 .recipes2{
     grid-area: recipes2;
@@ -295,7 +300,88 @@ form p{
 
 /*landing recipes*/
 
-
+.banner__recipes{
+    display: flex;
+}
+.title__lowcalories{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lowcalories-banner-recipes.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+.title__highprotein{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/highprotein-banner-recipes.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+.title__lowfat{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lowfat-banner-recipes.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+.title__text__recipes{
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text__recipes{
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    padding: 50px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.recipes__cards__lowcalories{
+    padding: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.recipe-title{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.protein__colour{
+    background-color: rgb(246, 233, 177);
+}
+.carbs__colour{
+    background-color: rgb(187, 250, 238);
+}
+.fats__colour{
+    background-color: rgb(245, 202, 245);
+}
+.other__categories{
+    display: flex;
+    justify-content: center;
+}
+.landing__recipes{
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    padding: 0px;
+}
+.landing__recipes img{
+   width: 8rem;
+}
+.check__also{
+    text-align: center;
+    padding: 20px;
+}
 
 /*landing nutritional information*/
 
@@ -306,56 +392,45 @@ form p{
 }
 .nutriInfo h1{
     margin: 40px;
-}
-.info1{
-    display: flex;
-}
-.info1 img{
-    width: 30%;
-    margin: auto;
+    color: black;
 }
 .infoMacros{
     margin-top: 40px;
+    padding: 15px;
 }
-.infoMacros h2{
-    margin-left: 10px;
-    font-weight: bold;
+
+.protein__button{
+    background-color: rgb(246, 233, 177);
+    font-weight: 900;
+    font-size: 2rem;
 }
-.protein{
-    background-color: rgb(250, 225, 117);
+.protein__bg{
     display: flex;
-    padding: 30px;
-    margin-block: 20px;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }
-.protein h2{
-    font-weight: bold;
-    padding: 10px;
+.carbs__button{
+    background-color: rgb(187, 250, 238);
+    font-weight: 900;
+    font-size: 2rem;
 }
-.carbs{
-    background-color: rgb(127, 245, 223);
+.carbs__bg{
     display: flex;
-    padding: 30px;
-    margin-block: 20px;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }
-.carbs h2{
-    font-weight: bold;
-    padding: 10px;
+.fats__button{
+    background-color: rgb(245, 202, 245);
+    font-weight: 900;
+    font-size: 2rem;
 }
-.fats{
-    background-color: rgb(249, 152, 249);
+.fats__bg{
     display: flex;
-    padding: 30px;
-    margin-block: 20px;
-    justify-content: space-between;
-    align-items: center;
-}
-.fats h2{
-    font-weight: bold;
-    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }
 
 /*landing calculator*/
@@ -395,67 +470,90 @@ form p{
 }
 .faqs{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-.faqAll{
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.question{
-    padding: 10px;
-    margin: 5px;
-    border: 0.5px solid rgb(232, 230, 230);
-    border-radius: 10px;
-    width: max-content;
-    background-color: whitesmoke;
+    font-weight: 900;
 }
 
+/*landing shop*/
+
+.main__shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px;
+}
+.shakers__banner{
+    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 30%;
+    min-height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/shaker-banner.webp)
+}
+.whey__banner{
+    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 30%;
+    min-height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wheyprotein-banner.webp)
+}
+.scales__banner{
+    margin: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 30%;
+    min-height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/scales-banner.jpeg)
+}
+.title__shop{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+}
+.shakers__banner:hover{
+    transform: scale(1.05);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/shaker-banner.webp);
+}
+.shakers__banner:hover .title__shop{
+    background-color: white;
+    color: black;
+}
+.whey__banner:hover{
+    transform: scale(1.05);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wheyprotein-banner.webp);
+}
+.whey__banner:hover .title__shop{
+    background-color: white;
+    color: black;
+}
+.scales__banner:hover{
+    transform: scale(1.05);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/scales-banner.jpeg);
+}
+.scales__banner:hover .title__shop{
+    background-color: white;
+    color: black;
+}
 
 /*responsive----------------------------*/
 
 /*responsive tablet horizontal */
 @media screen and (max-width: 934px){
-    .checkbtn{
-        display: block;
-        margin: auto;
-    }
-    ul{
-        position: fixed;
-        height: fit-content;
-        width: 100%;
-        left: 100%;
-        top: 80px;
-        text-align: center;
-        transition: all .5s;
-        background-color: rgb(111, 20, 237);
-    }
-    .separation{
-        display: none;
-    }
-    nav ul li{
-        display: block;
-        margin: 3px;
-    }
-    nav ul li:hover{
-        background-color: rgb(81, 13, 175);
-        color: white;
-    }
-    nav ul li a{
-        font-size: 20px;
-        color: white;
-    }
-    #check:checked ~ ul{
-        left: 0;
-        flex-direction: column;
-    }
-    .container {
+    .container1 {
+        margin: 7px;
         grid-template-columns: repeat (2, 1fr);
-        grid-template-rows: repeat (8, 1fr);
+        grid-template-rows: repeat (7, 1fr);
         grid-template-areas:
-        "banner banner"
         "recipes recipes"
         "cat1 cat1"
         "cat2 cat2"
@@ -496,22 +594,35 @@ form p{
         display: flex;
         flex-direction: column;
     }
-    .info1{
+    .recipes__cards__lowcalories{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "card1 card2"
+        "card3 card4";
+        gap: 10px;
+    }
+    .card1{
+        grid-area: card1;
+    }
+    .card2{
+        grid-area: card2;
+    }
+    .card3{
+        grid-area: card3;
+    }
+    .card4{
+        grid-area: card4;
+    }
+    .card{
+        margin: auto;
+    }
+    .banner__recipes{
         display: block;
     }
-    .info1 img{
-        display: flex;
-        justify-content: center;
-        width: 50%;
-    }
-    .protein{
-        display: block;
-    }
-    .carbs{
-        display: block;
-    }
-    .fats{
-        display: block;
+    .title__lowcalories,.title__highprotein,.title__lowfat,.text__recipes{
+        width: 100%;
     }
     .resultList{
         position: relative;
@@ -522,6 +633,13 @@ form p{
     }
     .row__recipes{
         display: block;
+    }
+    .main__shop{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .shakers__banner,.whey__banner,.scales__banner{
+        width: 100%;
     }
 
 }
@@ -561,6 +679,30 @@ form p{
     .form{
         display: block;
     }
+    .recipes__cards__lowcalories{
+        display: block;
+        margin: auto;
+        padding: 0;
+    }
+    .card{
+        margin-top: 10px;
+    }
+    .mainCD{
+        margin: auto;
+        padding: 0;
+     }
+     .info img{
+        height: 300px;
+        width: auto;
+     }
+     .text__recipes{
+        margin: auto;
+        padding: 20px;
+     }
+     .other__categories{
+        flex-direction: column;
+        align-items: center;
+     }
 }
 
 
