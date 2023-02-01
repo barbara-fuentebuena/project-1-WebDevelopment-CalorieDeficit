@@ -673,6 +673,22 @@ form p{
     .form{
         display: block;
     }
+    .recipes__cards__lowcalories{
+        display: block;
+        margin: auto;
+        padding: 0;
+    }
+    .card{
+        margin-top: 10px;
+    }
+    .text__recipes{
+        margin: auto;
+        padding: 20px;
+     }
+     .other__categories{
+        flex-direction: column;
+        align-items: center;
+     }
 }
 
 /*responsive mobile*/
@@ -688,25 +704,9 @@ form p{
         padding: 20px;
         font-weight: normal;
     }
-    .recipes__cards__lowcalories{
-        display: block;
-        margin: auto;
-        padding: 0;
-    }
-    .card{
-        margin-top: 10px;
-    }
      .info img{
         height: 300px;
         width: auto;
-     }
-     .text__recipes{
-        margin: auto;
-        padding: 20px;
-     }
-     .other__categories{
-        flex-direction: column;
-        align-items: center;
      }
 }
 
