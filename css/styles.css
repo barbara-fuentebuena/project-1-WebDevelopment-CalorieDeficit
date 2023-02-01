@@ -710,10 +710,23 @@ form p{
         padding: 20px;
         font-weight: normal;
     }
-     .info img{
+    .info img{
         height: 300px;
         width: auto;
      }
+     .text__recipes{
+        margin: auto;
+        padding: 25px;
+        height: auto;
+     }
 }
-
+@media screen and (max-width: 380px){
+    .nutriInfo h1{
+        margin: 0;
+        font-size: 2rem;
+    }
+    .protein__bg a{
+        text-align: left;
+    }
+}
 
