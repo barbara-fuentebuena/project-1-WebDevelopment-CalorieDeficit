@@ -148,13 +148,14 @@ h1{
     font-weight: lighter;
     font-family:'Roboto', sans-serif;
 }
-h3{
+.containernews1 h3{
     font-size: 3rem;
     color: black;
-    font-weight: bold;
-
+    font-weight: lighter;
 }
-
+.containernews1 p{
+    font-weight: lighter;
+}
 .containernews2 input{
     margin-inline: 1.3rem;
     margin-top: 1.5%;
@@ -647,6 +648,7 @@ form p{
 @media screen and (max-width: 768px){
     .mainCD{
        display: block;
+       margin: 0;
     }
     .calculator{
         border-radius: 0px;
@@ -657,10 +659,23 @@ form p{
         flex-direction: column;
         margin-inline: 20px;
     }
+    .nutriInfo h1{
+        margin:4px;
+        padding: 7px;
+        text-align: center;
+        font-size: 3rem;
+    }
+    .calculator{
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        display: block;
+    }
 }
 
 /*responsive mobile*/
-@media screen and (max-width: 380px){
+@media screen and (max-width: 400px){
     .title{
         width: 300px;
     }
@@ -672,13 +687,6 @@ form p{
         padding: 20px;
         font-weight: normal;
     }
-    .calculator{
-        display: flex;
-        flex-direction: column;
-    }
-    .form{
-        display: block;
-    }
     .recipes__cards__lowcalories{
         display: block;
         margin: auto;
@@ -687,10 +695,6 @@ form p{
     .card{
         margin-top: 10px;
     }
-    .mainCD{
-        margin: auto;
-        padding: 0;
-     }
      .info img{
         height: 300px;
         width: auto;
