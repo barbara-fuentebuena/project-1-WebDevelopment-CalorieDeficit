@@ -216,12 +216,22 @@ main{
         align-items: center;
         padding: 50px;
         font-family:'Roboto', sans-serif;
+        h1{
+            margin-bottom: 50px;
+        }
         img{
             height: 600px;
             padding: 25px;
         }
         p{
             text-align: justify;
+        }
+        li{
+            width: 80%;
+            padding: 10px;
+            span{
+                font-weight: bold;
+            }
         }
     }
 }
@@ -343,6 +353,9 @@ main{
     }
     p{
         color: grey;
+        span{
+            font-weight: bold;
+        }
     }
 }
 div{
@@ -371,18 +384,33 @@ div{
                     flex-direction: column;
                     justify-content: center;
                     overflow: hidden;
+                    li{
+                        span{
+                            font-weight: bold;
+                        }
+                    }
                 }
                 .carbs__bg{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     overflow: hidden;
+                    li{
+                        span{
+                            font-weight: bold;
+                        }
+                    }
                 }
                 .fats__bg{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     overflow: hidden;
+                    li{
+                        span{
+                            font-weight: bold;
+                        }
+                    }
                 }
             }
         }
@@ -610,7 +638,7 @@ div{
         text-align: justify;
     }
 }
-.recipes__cards__lowcalories{
+.recipes__cards{
     padding: 70px;
     display: flex;
     justify-content: space-around;
@@ -768,8 +796,11 @@ div{
                         color: grey;
                     }
                 }
-
-
+            }
+            p{
+                span{
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -899,8 +930,29 @@ div{
             justify-content: flex-end;
             margin-top: 10px;
             margin-bottom: 10px;
-            .heart,.cart,.share{
-                margin: 10px;
+            .heart{
+                margin: 5px;
+                padding: 10px;
+                &:hover{
+                    color: red;
+                    cursor: pointer;
+                }
+            }
+            .cart{
+                margin: 5px;
+                padding: 10px;
+                &:hover{
+                    color: rgb(2, 98, 2);
+                    cursor: pointer;
+                }
+            }
+            .share{
+                margin: 5px;
+                padding: 10px;
+                &:hover{
+                    color: rgb(5, 2, 163);
+                    cursor: pointer;
+                }
             }
         }
     }

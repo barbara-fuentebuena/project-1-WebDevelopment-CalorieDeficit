@@ -90,7 +90,7 @@ footer{
             padding: 3%;
         }   
     }
-    .recipes__cards__lowcalories{
+    .recipes__cards{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -152,8 +152,9 @@ footer{
             .recipe__title{
                 width: 100%;
                 align-items: center;
+                margin: 0;
                 p{
-                    width: 80%;
+                    width: 90%;
                 }
                 h2{
                     text-align: center;
@@ -267,7 +268,7 @@ footer{
             }
         }
     }
-    .recipes__cards__lowcalories{
+    .recipes__cards{
         display: block;
         margin: auto;
         padding: 20px;

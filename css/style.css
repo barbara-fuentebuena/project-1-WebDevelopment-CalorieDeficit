@@ -185,11 +185,18 @@ main div div div .banner2 {
     align-items: center;
     padding: 50px;
     font-family: 'Roboto', sans-serif; }
+    .mainCD .info h1 {
+      margin-bottom: 50px; }
     .mainCD .info img {
       height: 600px;
       padding: 25px; }
     .mainCD .info p {
       text-align: justify; }
+    .mainCD .info li {
+      width: 80%;
+      padding: 10px; }
+      .mainCD .info li span {
+        font-weight: bold; }
 
 .calculator {
   grid-area: calculator;
@@ -297,6 +304,8 @@ main div div div .banner2 {
     color: black; }
   .nutriInfo p {
     color: grey; }
+    .nutriInfo p span {
+      font-weight: bold; }
 
 div div h2 .protein__button {
   background-color: #f6e9b1;
@@ -318,18 +327,24 @@ div div div div .protein__bg {
   flex-direction: column;
   justify-content: center;
   overflow: hidden; }
+  div div div div .protein__bg li span {
+    font-weight: bold; }
 
 div div div div .carbs__bg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden; }
+  div div div div .carbs__bg li span {
+    font-weight: bold; }
 
 div div div div .fats__bg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden; }
+  div div div div .fats__bg li span {
+    font-weight: bold; }
 
 /*landing calculator---------------------------------*/
 .calculator h4 {
@@ -518,13 +533,13 @@ div div div div .fats__bg {
     font-size: 1.2rem;
     text-align: justify; }
 
-.recipes__cards__lowcalories {
+.recipes__cards {
   padding: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: whitesmoke; }
-  .recipes__cards__lowcalories div div .recipe-title {
+  .recipes__cards div div .recipe-title {
     font-weight: bold;
     font-size: 1.2rem; }
 
@@ -648,6 +663,8 @@ div div div div .fats__bg {
           font-weight: bold; }
           .mainRecipes .recipe__primary__container .steps .shop-ingredient a:hover {
             color: grey; }
+      .mainRecipes .recipe__primary__container .steps p span {
+        font-weight: bold; }
   .mainRecipes .recipe__secondary__container {
     text-align: center;
     margin: 30px; }
@@ -746,8 +763,24 @@ div div div div .fats__bg {
       justify-content: flex-end;
       margin-top: 10px;
       margin-bottom: 10px; }
-      .mainShop .shop__main__container .shop__icons .heart, .mainShop .shop__main__container .shop__icons .cart, .mainShop .shop__main__container .shop__icons .share {
-        margin: 10px; }
+      .mainShop .shop__main__container .shop__icons .heart {
+        margin: 5px;
+        padding: 10px; }
+        .mainShop .shop__main__container .shop__icons .heart:hover {
+          color: red;
+          cursor: pointer; }
+      .mainShop .shop__main__container .shop__icons .cart {
+        margin: 5px;
+        padding: 10px; }
+        .mainShop .shop__main__container .shop__icons .cart:hover {
+          color: #026202;
+          cursor: pointer; }
+      .mainShop .shop__main__container .shop__icons .share {
+        margin: 5px;
+        padding: 10px; }
+        .mainShop .shop__main__container .shop__icons .share:hover {
+          color: #0502a3;
+          cursor: pointer; }
   .mainShop .shop__primary__container .product__description {
     background-color: whitesmoke;
     display: block;
@@ -827,21 +860,21 @@ footer {
       width: 100%;
       margin: auto;
       padding: 3%; }
-  .recipes__cards__lowcalories {
+  .recipes__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "card1 card2" "card3 card4";
     gap: 10px; }
-    .recipes__cards__lowcalories .card1 {
+    .recipes__cards .card1 {
       grid-area: card1; }
-    .recipes__cards__lowcalories .card2 {
+    .recipes__cards .card2 {
       grid-area: card2; }
-    .recipes__cards__lowcalories .card3 {
+    .recipes__cards .card3 {
       grid-area: card3; }
-    .recipes__cards__lowcalories .card4 {
+    .recipes__cards .card4 {
       grid-area: card4; }
-    .recipes__cards__lowcalories .card {
+    .recipes__cards .card {
       margin: auto; }
   .result {
     padding: 5%;
@@ -873,9 +906,10 @@ footer {
           width: 80%; }
       .mainRecipes .recipe__main__container .recipe__title {
         width: 100%;
-        align-items: center; }
+        align-items: center;
+        margin: 0; }
         .mainRecipes .recipe__main__container .recipe__title p {
-          width: 80%; }
+          width: 90%; }
         .mainRecipes .recipe__main__container .recipe__title h2 {
           text-align: center; }
   .mainShop {
@@ -954,11 +988,11 @@ footer {
         display: flex;
         flex-direction: column;
         margin-inline: 20px; }
-  .recipes__cards__lowcalories {
+  .recipes__cards {
     display: block;
     margin: auto;
     padding: 20px; }
-    .recipes__cards__lowcalories .card {
+    .recipes__cards .card {
       margin-top: 20px; }
   .other__categories {
     flex-direction: column;
