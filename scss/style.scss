@@ -135,6 +135,94 @@ footer{
             width: 100%;
         }
     }
+    .mainRecipes{
+        width: 100%;
+        .recipe__main__container{
+            display: block;
+            margin: 0;
+            padding: 0;
+            .recipe__picture{
+                width: 100%;
+                text-align: center;
+                height: auto;
+                img{
+                    width: 80%;
+                }
+            }
+            .recipe__title{
+                width: 100%;
+                align-items: center;
+                p{
+                    width: 80%;
+                }
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .mainShop{
+        width: 100%;  
+
+        .shop__main__container{
+            display: block;
+            .shop__picture{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+            .shop__title{
+                width: 100%;
+                align-items: flex-start;
+            }
+            .shop__icons{
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+        .shop__primary__container{
+            .product__description{
+                background-color: whitesmoke;
+                display: block; 
+                padding: 20px;
+                text-align: justify;
+                p{
+                    padding: 10px;
+                }
+            }
+        }
+        .shop__secondary__container{
+            margin-bottom: 50px;
+            .other__categorie__shop{
+                flex-direction: column;
+                .categorie_1{
+                    width: 100%;
+                    align-items: center;
+                    a{
+                        width: 100%;
+                        img{
+                            width: fit-content;
+                            height: 200px;
+                            margin: 5px;
+                        }
+                    }
+                }
+                .categorie_2{
+                    width: 100%;
+                    align-items: center;
+                    a{
+                        width: 100%;
+                        img{
+                            width: fit-content;
+                            height: 200px;
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*responsive tablet vertical */
@@ -196,7 +284,13 @@ footer{
             margin: 15px;
             padding: 0px;
         }
-     }
+    }
+    .recipe__picture{
+        h3{
+            top: 30%;
+            left: 30%;
+        }
+    }
 }
 
 /*responsive mobile*/
@@ -221,6 +315,60 @@ footer{
                 width: auto;
             }
         }
+    }
+    .mainRecipes{
+        .recipe__primary__container{
+            margin-left: 0;
+            display: block;
+            height: auto;
+            padding: 20px;
+            margin: auto;
+            .ingredients{
+                width: 100%;
+                margin:0;
+                padding: 0;
+                overflow:visible;
+            }
+            .steps{
+                width: 100%;
+                margin: 0;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                padding: 0;
+                overflow: visible;
+            }
+        }
+        .recipe__third__container{
+            div{
+                h2{
+                    margin-top: 70px;
+                }
+            }
+            .recipe__options{
+                display: block;
+                .recipe__option__1{
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    img{
+                        width: 100%;
+                        padding: 10px;
+                    }
+                }
+                .recipe__option__2{
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    img{
+                        width: 100%;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .shop__variations{
+        margin-top: 15px;
     }
 }
 @media screen and (max-width: 380px){

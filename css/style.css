@@ -194,8 +194,7 @@ main div div div .banner2 {
 .calculator {
   grid-area: calculator;
   margin: 10px;
-  background: #f5f569;
-  background-image: url(../img/background-yellow.jpeg);
+  background: #f6e9b1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -287,99 +286,6 @@ main div div div .banner2 {
   .cat3:hover {
     background-color: #005648;
     transform: scale(1.08); }
-
-/*landing recipes---------------------------------*/
-.banner__recipes {
-  display: flex; }
-  .banner__recipes .title__lowcalories {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lowcalories-banner-recipes.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 500px;
-    position: relative; }
-    .banner__recipes .title__lowcalories .title__text__recipes {
-      color: white;
-      font-size: 4rem;
-      font-weight: bolder;
-      font-family: 'Roboto';
-      text-align: center;
-      opacity: 1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .banner__recipes .title__highprotein {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/highprotein-banner-recipes.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 500px;
-    position: relative; }
-    .banner__recipes .title__highprotein .title__text__recipes {
-      color: white;
-      font-size: 4rem;
-      font-weight: bolder;
-      font-family: 'Roboto';
-      text-align: center;
-      opacity: 1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .banner__recipes .title__lowfat {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lowfat-banner-recipes.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 500px;
-    position: relative; }
-    .banner__recipes .title__lowfat .title__text__recipes {
-      color: white;
-      font-size: 4rem;
-      font-weight: bolder;
-      font-family: 'Roboto';
-      text-align: center;
-      opacity: 1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .banner__recipes .text__recipes {
-    width: 50%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: grey;
-    padding: 50px;
-    font-size: 1.2rem;
-    text-align: justify; }
-
-.recipes__cards__lowcalories {
-  padding: 70px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: whitesmoke; }
-  .recipes__cards__lowcalories div div .recipe-title {
-    font-weight: bold;
-    font-size: 1.2rem; }
-
-.check__also {
-  text-align: center;
-  padding: 20px; }
-
-.other__categories {
-  display: flex;
-  justify-content: center; }
-  .other__categories a .landing__recipes {
-    height: 250px;
-    width: 250px;
-    margin: 20px;
-    padding: 0px; }
-    .other__categories a .landing__recipes img {
-      width: 8rem; }
 
 /*landing nutritional info---------------------------------*/
 .nutriInfo {
@@ -544,6 +450,343 @@ div div div div .fats__bg {
       color: white;
       font-weight: 500; }
 
+/*main landing recipes---------------------------------*/
+.banner__recipes {
+  display: flex; }
+  .banner__recipes .title__lowcalories {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lowcalories-banner-recipes.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 500px;
+    position: relative; }
+    .banner__recipes .title__lowcalories .title__text__recipes {
+      color: white;
+      font-size: 4rem;
+      font-weight: bolder;
+      font-family: 'Roboto';
+      text-align: center;
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .banner__recipes .title__highprotein {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/highprotein-banner-recipes.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 500px;
+    position: relative; }
+    .banner__recipes .title__highprotein .title__text__recipes {
+      color: white;
+      font-size: 4rem;
+      font-weight: bolder;
+      font-family: 'Roboto';
+      text-align: center;
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .banner__recipes .title__lowfat {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lowfat-banner-recipes.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 500px;
+    position: relative; }
+    .banner__recipes .title__lowfat .title__text__recipes {
+      color: white;
+      font-size: 4rem;
+      font-weight: bolder;
+      font-family: 'Roboto';
+      text-align: center;
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .banner__recipes .text__recipes {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    padding: 50px;
+    font-size: 1.2rem;
+    text-align: justify; }
+
+.recipes__cards__lowcalories {
+  padding: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke; }
+  .recipes__cards__lowcalories div div .recipe-title {
+    font-weight: bold;
+    font-size: 1.2rem; }
+
+.check__also {
+  text-align: center;
+  padding: 20px; }
+
+.other__categories {
+  display: flex;
+  justify-content: center; }
+  .other__categories a .landing__recipes {
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    padding: 0px; }
+    .other__categories a .landing__recipes img {
+      width: 8rem; }
+
+/*all landing recipes---------------------------------*/
+.mainRecipes {
+  width: 80%;
+  margin: auto; }
+  .mainRecipes .recipe__main__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px; }
+    .mainRecipes .recipe__main__container .recipe__picture {
+      width: 50%;
+      position: relative; }
+      .mainRecipes .recipe__main__container .recipe__picture img {
+        width: 100%; }
+      .mainRecipes .recipe__main__container .recipe__picture h3 {
+        background-color: #019980;
+        color: white;
+        font-size: 1rem;
+        font-weight: normal;
+        width: fit-content;
+        padding: 7px;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translate(-50%, -50%); }
+    .mainRecipes .recipe__main__container .recipe__title {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 7px;
+      margin: 10px; }
+      .mainRecipes .recipe__main__container .recipe__title h2 {
+        font-size: 3.5rem;
+        padding: 15px;
+        text-align: end; }
+      .mainRecipes .recipe__main__container .recipe__title h4 {
+        font-size: 1rem;
+        padding: 5px; }
+      .mainRecipes .recipe__main__container .recipe__title p {
+        font-weight: lighter;
+        color: grey;
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+        text-align: justify; }
+      .mainRecipes .recipe__main__container .recipe__title a {
+        font-size: 0,7rem;
+        text-align: end;
+        font-style: italic;
+        color: black;
+        font-weight: 300; }
+      .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros {
+        display: flex; }
+        .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__protein {
+          background-color: #f6e9b1;
+          padding: 12px;
+          margin: 5px; }
+        .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__carbs {
+          background-color: #bbfaee;
+          padding: 12px;
+          margin: 5px; }
+        .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__fats {
+          background-color: #f5caf5;
+          padding: 12px;
+          margin: 5px; }
+  .mainRecipes .recipe__primary__container {
+    display: flex;
+    background-color: whitesmoke;
+    height: 500px;
+    padding: 50px; }
+    .mainRecipes .recipe__primary__container .ingredients {
+      width: 30%;
+      border: 1px solid grey;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: 15px;
+      overflow-y: scroll; }
+      .mainRecipes .recipe__primary__container .ingredients p {
+        font-style: italic; }
+    .mainRecipes .recipe__primary__container .steps {
+      width: 70%;
+      margin: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      overflow-y: scroll; }
+      .mainRecipes .recipe__primary__container .steps .shop-ingredient {
+        background-color: whitesmoke;
+        border: #019980 1px solid;
+        padding: 10px;
+        margin: 15px;
+        text-align: center; }
+        .mainRecipes .recipe__primary__container .steps .shop-ingredient a {
+          color: #019980;
+          text-decoration: none;
+          font-size: 1rem;
+          font-weight: bold; }
+          .mainRecipes .recipe__primary__container .steps .shop-ingredient a:hover {
+            color: grey; }
+  .mainRecipes .recipe__secondary__container {
+    text-align: center;
+    margin: 30px; }
+    .mainRecipes .recipe__secondary__container a {
+      text-decoration: none;
+      background-color: #019980;
+      color: white;
+      font-weight: 500;
+      font-size: 1.2rem;
+      padding: 10px; }
+      .mainRecipes .recipe__secondary__container a:hover {
+        background-color: white;
+        color: #019980; }
+  .mainRecipes .recipe__third__container {
+    margin-bottom: 30px; }
+    .mainRecipes .recipe__third__container div h2 {
+      text-align: center;
+      font-weight: lighter;
+      margin-top: 70px; }
+    .mainRecipes .recipe__third__container .recipe__options {
+      display: flex;
+      justify-content: center; }
+      .mainRecipes .recipe__third__container .recipe__options .recipe__option__1 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; }
+        .mainRecipes .recipe__third__container .recipe__options .recipe__option__1 img {
+          width: 80%;
+          padding: 10px; }
+        .mainRecipes .recipe__third__container .recipe__options .recipe__option__1 a {
+          color: black; }
+      .mainRecipes .recipe__third__container .recipe__options .recipe__option__2 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; }
+        .mainRecipes .recipe__third__container .recipe__options .recipe__option__2 img {
+          width: 80%;
+          padding: 10px; }
+        .mainRecipes .recipe__third__container .recipe__options .recipe__option__2 a {
+          color: black; }
+
+/*all landing shop------------------------------------*/
+.mainShop {
+  width: 80%;
+  margin: auto; }
+  .mainShop .basket__container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px; }
+    .mainShop .basket__container .basket__items {
+      display: flex;
+      width: fit-content;
+      padding: 10px;
+      border: black solid 0.5px;
+      border-radius: 5px; }
+      .mainShop .basket__container .basket__items p {
+        margin: 5px; }
+      .mainShop .basket__container .basket__items svg {
+        margin: 5px; }
+  .mainShop .shop__main__container {
+    display: flex;
+    margin: 15px;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center; }
+    .mainShop .shop__main__container .shop__picture {
+      width: 50%; }
+      .mainShop .shop__main__container .shop__picture img {
+        width: 100%; }
+    .mainShop .shop__main__container .shop__title {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      align-items: flex-end;
+      text-align: justify; }
+      .mainShop .shop__main__container .shop__title p {
+        color: grey; }
+      .mainShop .shop__main__container .shop__title div .buy__now__style {
+        background-color: yellow;
+        padding: 15px;
+        border: none;
+        text-decoration: none;
+        font-size: 1rem;
+        color: black;
+        font-weight: 600; }
+        .mainShop .shop__main__container .shop__title div .buy__now__style:hover {
+          background-color: #6f14ed;
+          color: white; }
+    .mainShop .shop__main__container .shop__icons {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      .mainShop .shop__main__container .shop__icons .heart, .mainShop .shop__main__container .shop__icons .cart, .mainShop .shop__main__container .shop__icons .share {
+        margin: 10px; }
+  .mainShop .shop__primary__container .product__description {
+    background-color: whitesmoke;
+    display: block;
+    padding: 20px;
+    text-align: justify; }
+  .mainShop .shop__secondary__container {
+    margin-bottom: 50px; }
+    .mainShop .shop__secondary__container .other__categorie__shop {
+      display: flex;
+      width: 100%; }
+      .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a {
+          width: 70%;
+          text-align: center;
+          color: black; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a img {
+            width: 50%; }
+            .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a img:hover {
+              opacity: 0.6; }
+      .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a {
+          width: 50%;
+          text-align: center;
+          color: black; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a img {
+            width: 70%; }
+            .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a img:hover {
+              opacity: 0.6; }
+
 footer {
   border-top: #b1b0b0 1px solid;
   color: black;
@@ -615,7 +858,69 @@ footer {
     flex-direction: column;
     margin: 10px; }
     .main__shop .shakers__banner, .main__shop .whey__banner, .main__shop .scales__banner {
-      width: 100%; } }
+      width: 100%; }
+  .mainRecipes {
+    width: 100%; }
+    .mainRecipes .recipe__main__container {
+      display: block;
+      margin: 0;
+      padding: 0; }
+      .mainRecipes .recipe__main__container .recipe__picture {
+        width: 100%;
+        text-align: center;
+        height: auto; }
+        .mainRecipes .recipe__main__container .recipe__picture img {
+          width: 80%; }
+      .mainRecipes .recipe__main__container .recipe__title {
+        width: 100%;
+        align-items: center; }
+        .mainRecipes .recipe__main__container .recipe__title p {
+          width: 80%; }
+        .mainRecipes .recipe__main__container .recipe__title h2 {
+          text-align: center; }
+  .mainShop {
+    width: 100%; }
+    .mainShop .shop__main__container {
+      display: block; }
+      .mainShop .shop__main__container .shop__picture {
+        width: 100%; }
+        .mainShop .shop__main__container .shop__picture img {
+          width: 100%; }
+      .mainShop .shop__main__container .shop__title {
+        width: 100%;
+        align-items: flex-start; }
+      .mainShop .shop__main__container .shop__icons {
+        display: flex;
+        justify-content: flex-start; }
+    .mainShop .shop__primary__container .product__description {
+      background-color: whitesmoke;
+      display: block;
+      padding: 20px;
+      text-align: justify; }
+      .mainShop .shop__primary__container .product__description p {
+        padding: 10px; }
+    .mainShop .shop__secondary__container {
+      margin-bottom: 50px; }
+      .mainShop .shop__secondary__container .other__categorie__shop {
+        flex-direction: column; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 {
+          width: 100%;
+          align-items: center; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a {
+            width: 100%; }
+            .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a img {
+              width: fit-content;
+              height: 200px;
+              margin: 5px; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
+          width: 100%;
+          align-items: center; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a {
+            width: 100%; }
+            .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a img {
+              width: fit-content;
+              height: 200px;
+              margin: 5px; } }
 
 /*responsive tablet vertical */
 @media screen and (max-width: 768px) {
@@ -662,7 +967,10 @@ footer {
       height: 200px;
       width: 320px;
       margin: 15px;
-      padding: 0px; } }
+      padding: 0px; }
+  .recipe__picture h3 {
+    top: 30%;
+    left: 30%; } }
 
 /*responsive mobile*/
 @media screen and (max-width: 428px) {
@@ -679,7 +987,45 @@ footer {
     padding: 5%; }
     .mainCD .info img {
       height: 300px;
-      width: auto; } }
+      width: auto; }
+  .mainRecipes .recipe__primary__container {
+    margin-left: 0;
+    display: block;
+    height: auto;
+    padding: 20px;
+    margin: auto; }
+    .mainRecipes .recipe__primary__container .ingredients {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: visible; }
+    .mainRecipes .recipe__primary__container .steps {
+      width: 100%;
+      margin: 0;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding: 0;
+      overflow: visible; }
+  .mainRecipes .recipe__third__container div h2 {
+    margin-top: 70px; }
+  .mainRecipes .recipe__third__container .recipe__options {
+    display: block; }
+    .mainRecipes .recipe__third__container .recipe__options .recipe__option__1 {
+      width: 100%;
+      display: block;
+      text-align: center; }
+      .mainRecipes .recipe__third__container .recipe__options .recipe__option__1 img {
+        width: 100%;
+        padding: 10px; }
+    .mainRecipes .recipe__third__container .recipe__options .recipe__option__2 {
+      width: 100%;
+      display: block;
+      text-align: center; }
+      .mainRecipes .recipe__third__container .recipe__options .recipe__option__2 img {
+        width: 100%;
+        padding: 10px; }
+  .shop__variations {
+    margin-top: 15px; } }
 
 @media screen and (max-width: 380px) {
   .protein__bg a {
