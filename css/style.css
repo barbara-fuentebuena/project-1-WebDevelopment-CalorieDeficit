@@ -288,27 +288,38 @@ main div div div .banner2 {
   text-align: justify;
   margin: 50px;
   font-family: 'Roboto', sans-serif; }
-  .nutriInfo h1 {
-    margin: 40px;
-    color: black; }
-  .nutriInfo h2 {
-    color: #444343;
-    font-size: 1.3rem; }
-    .nutriInfo h2 span {
-      font-weight: bold; }
+  .nutriInfo .info1 {
+    display: flex; }
+    .nutriInfo .info1 img {
+      padding: 20px;
+      margin: 20px; }
+    .nutriInfo .info1 .nutri__text {
+      padding: 20px;
+      margin: 20px;
+      line-height: 2rem;
+      display: flex;
+      flex-direction: column; }
+      .nutriInfo .info1 .nutri__text h1 {
+        margin: 40px;
+        color: black; }
+      .nutriInfo .info1 .nutri__text h2 {
+        color: #444343;
+        font-size: 1.3rem; }
+        .nutriInfo .info1 .nutri__text h2 span {
+          font-weight: bold; }
 
 div div h2 .protein__button {
-  background-color: #f7efcf;
+  background-color: #abf7df;
   font-weight: 900;
   font-size: 2rem; }
 
 div div h2 .carbs__button {
-  background-color: #d7f9f3;
+  background-color: #c7fbea;
   font-weight: 900;
   font-size: 2rem; }
 
 div div h2 .fats__button {
-  background-color: #f6dff6;
+  background-color: #e6fbf4;
   font-weight: 900;
   font-size: 2rem; }
 
@@ -488,17 +499,19 @@ div div div div .fats__bg {
       transform: scale(1.05);
       background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/shaker-banner.webp); }
       .main__shop .shakers__banner:hover .title__shop {
-        background-color: white;
-        color: black; }
+        display: none; }
     .main__shop .shakers__banner .title__shop {
       text-align: center;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 2rem;
+      background-color: #019980;
+      border-radius: 30px;
       color: white;
-      font-weight: 500; }
+      font-weight: 500;
+      font-size: 1.6rem;
+      padding: 30px; }
   .main__shop .whey__banner {
     margin: 10px;
     background-position: center;
@@ -512,17 +525,19 @@ div div div div .fats__bg {
       transform: scale(1.05);
       background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wheyprotein-banner.webp); }
       .main__shop .whey__banner:hover .title__shop {
-        background-color: white;
-        color: black; }
+        display: none; }
     .main__shop .whey__banner .title__shop {
       text-align: center;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 2rem;
+      background-color: #019980;
+      border-radius: 30px;
       color: white;
-      font-weight: 500; }
+      font-weight: 500;
+      font-size: 1.6rem;
+      padding: 30px; }
   .main__shop .scales__banner {
     margin: 10px;
     background-position: center;
@@ -536,17 +551,19 @@ div div div div .fats__bg {
       transform: scale(1.05);
       background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/scales-banner.jpeg); }
       .main__shop .scales__banner:hover .title__shop {
-        background-color: white;
-        color: black; }
+        display: none; }
     .main__shop .scales__banner .title__shop {
       text-align: center;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 2rem;
+      background-color: #019980;
+      border-radius: 30px;
       color: white;
-      font-weight: 500; }
+      font-weight: 500;
+      font-size: 1.6rem;
+      padding: 30px; }
 
 /*main landing recipes---------------------------------*/
 .banner__recipes {
@@ -699,15 +716,15 @@ div div div div .fats__bg {
       .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros {
         display: flex; }
         .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__protein {
-          background-color: #f7efcf;
+          background-color: #abf7df;
           padding: 12px;
           margin: 5px; }
         .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__carbs {
-          background-color: #d7f9f3;
+          background-color: #c7fbea;
           padding: 12px;
           margin: 5px; }
         .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__fats {
-          background-color: #f6dff6;
+          background-color: #e6fbf4;
           padding: 12px;
           margin: 5px; }
   .mainRecipes .recipe__primary__container {
@@ -965,13 +982,15 @@ footer {
     .recipes__cards .card {
       margin: auto; }
   .result {
-    padding: 5%; }
+    padding: 5%;
+    background-color: transparent; }
     .result .resultList {
       position: relative;
       left: auto;
       top: auto;
       background-color: white;
-      text-align: start; }
+      text-align: start;
+      background-color: transparent; }
   .row__recipes {
     display: block; }
   .main__shop {
@@ -1037,15 +1056,10 @@ footer {
     display: block;
     margin: 0; }
   .nutriInfo {
-    margin: 3% auto;
-    padding: 5%; }
-    .nutriInfo h1 {
-      margin-bottom: 15px;
-      padding: 7px;
-      text-align: center;
-      font-size: 3rem; }
-    .nutriInfo p {
-      margin-bottom: 5%; }
+    margin: 5px;
+    padding: 0; }
+    .nutriInfo img {
+      display: none; }
   .info h1 {
     margin: 4px;
     padding: 7px;

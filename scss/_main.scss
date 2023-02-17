@@ -336,16 +336,29 @@ main{
     text-align: justify;
     margin: 50px;
     font-family: 'Roboto', sans-serif;
-    h1{
-        margin: 40px;
-        color: black;
-    }
-    h2{
-        color: rgb(68, 67, 67);
-        font-size: 1.3rem;
-        
-        span{
-            font-weight: bold;
+    .info1{
+        display: flex;
+        img{
+            padding: 20px;
+            margin: 20px;
+        }
+        .nutri__text{
+            padding: 20px;
+            margin: 20px;
+            line-height: 2rem;
+            display: flex;
+            flex-direction: column;
+            h1{
+                margin: 40px;
+                color: black;
+            }
+            h2{
+                color: rgb(68, 67, 67);
+                font-size: 1.3rem;
+                span{
+                    font-weight: bold;
+                }
+            }
         }
     }
 }
@@ -605,8 +618,7 @@ div{
             transform: scale(1.05);
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/shaker-banner.webp);
             .title__shop{
-                background-color: white;
-                color: black;
+                display: none;
             }
         }
         .title__shop{
@@ -615,9 +627,12 @@ div{
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 2rem;
+            background-color: $color_green;
+            border-radius: 30px;
             color: white;
             font-weight: 500;
+            font-size: 1.6rem;
+            padding: 30px;
         }
     }
     .whey__banner{
@@ -633,8 +648,7 @@ div{
             transform: scale(1.05);
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wheyprotein-banner.webp);
             .title__shop{
-                background-color: white;
-                color: black;
+                display: none;
             }
         }
         .title__shop{
@@ -643,9 +657,12 @@ div{
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 2rem;
+            background-color: $color_green;
+            border-radius: 30px;
             color: white;
             font-weight: 500;
+            font-size: 1.6rem;
+            padding: 30px;
         }
     }
     .scales__banner{
@@ -661,8 +678,7 @@ div{
             transform: scale(1.05);
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/scales-banner.jpeg);
             .title__shop{
-                background-color: white;
-                color: black;
+                display: none;
             }
         }
         .title__shop{
@@ -671,9 +687,12 @@ div{
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 2rem;
+            background-color: $color_green;
+            border-radius: 30px;
             color: white;
             font-weight: 500;
+            font-size: 1.6rem;
+            padding: 30px;
         }
     }
 }
