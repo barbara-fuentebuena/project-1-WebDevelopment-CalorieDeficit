@@ -1,9 +1,9 @@
 $color_purple: rgb(111, 20, 237);
 $color_green: #019980;
 $color_green_dark: #005648;
-$color_proteins: rgb(246, 233, 177);
-$color_carbs: rgb(187, 250, 238);
-$color_fats: rgb(245, 202, 245);
+$color_proteins: rgb(247, 239, 207);
+$color_carbs: rgb(215, 249, 243);
+$color_fats: rgb(246, 223, 246);
 
 *{
     margin: 0;
@@ -86,8 +86,9 @@ footer{
         }
         .text__recipes{
             width: 100%;
-            margin: auto;
+            margin: 20px auto;
             padding: 3%;
+            height: fit-content;
         }   
     }
     .recipes__cards{
@@ -116,7 +117,6 @@ footer{
     }
     .result{
         padding: 5%;
-        margin: 5%;
         .resultList{
             position: relative;
             left: auto;
@@ -193,36 +193,22 @@ footer{
                 }
             }
         }
-        .shop__secondary__container{
-            margin-bottom: 50px;
-            .other__categorie__shop{
-                flex-direction: column;
-                .categorie_1{
-                    width: 100%;
-                    align-items: center;
-                    a{
-                        width: 100%;
-                        img{
-                            width: fit-content;
-                            height: 200px;
-                            margin: 5px;
-                        }
-                    }
-                }
-                .categorie_2{
-                    width: 100%;
-                    align-items: center;
-                    a{
-                        width: 100%;
-                        img{
-                            width: fit-content;
-                            height: 200px;
-                            margin: 5px;
-                        }
-                    }
+    }
+    .calculator__container{
+        .calculator__items{ 
+            flex-direction: column;
+            .calculator__gender,.calculator__age,.calculator__weight,.calculator__activity,.calculator__goal{
+                padding: 10px;
+                border: none;
+            }
+            .calculator__gender{
+                align-items: center;
+                div{
+                    width: fit-content;
+                    padding: 0;
                 }
             }
-        }
+        } 
     }
 }
 
@@ -236,7 +222,7 @@ footer{
         margin: 3% auto;
         padding: 5%;
         h1{
-            margin:4px;
+            margin-bottom:15px;
             padding: 7px;
             text-align: center;
             font-size: 3rem;
@@ -251,21 +237,6 @@ footer{
             padding: 7px;
             text-align: center;
             font-size: 3rem;
-        }
-    }
-    .calculator{
-        border-radius: 0px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        .form{
-            display: block;
-            .form1{
-                display: flex;
-                flex-direction: column;
-                margin-inline: 20px;
-            }
         }
     }
     .recipes__cards{
@@ -290,6 +261,44 @@ footer{
         h3{
             top: 30%;
             left: 30%;
+        }
+    }
+    .mainShop{
+        .shop__secondary__container{
+            margin-bottom: 50px;
+            .other__categorie__shop{
+                flex-direction: column;
+                .categorie_1{
+                    width: 100%;
+                    align-items: center;
+                    a{
+                        width: 100%;
+                        img{
+                            width: 50%;
+                            margin: 5px;
+                        }
+                    }
+                }
+                .categorie_2{
+                    width: 100%;
+                    align-items: center;
+                    a{
+                        width: 100%;
+                        img{
+                            width: 50%;
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .button__allRecipes{
+        flex-direction: column;
+        align-items: center;
+        .button__allRecipes1,.button__allRecipes2 {
+            margin-bottom: 3px;
+            padding: 15px;
         }
     }
 }
@@ -368,8 +377,16 @@ footer{
             }
         }
     }
-    .shop__variations{
-        margin-top: 15px;
+    .mainShop{
+        width: 100%;
+        .shop__main__container{
+            .shop__variations{
+                margin-top: 15px;
+            }
+            .shop__title{
+                padding: 10px;
+            }
+        }
     }
 }
 @media screen and (max-width: 380px){
@@ -389,3 +406,5 @@ footer{
         }
     }
 }
+
+

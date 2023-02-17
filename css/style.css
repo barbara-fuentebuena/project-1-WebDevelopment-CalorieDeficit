@@ -36,6 +36,7 @@ main div div div .banner1 {
       text-align: center; }
       main div div div .banner1 .title h1 .title__button {
         background-color: #019980;
+        border-radius: 30px;
         color: white;
         text-decoration: none;
         font-size: 1rem; }
@@ -64,6 +65,7 @@ main div div div .banner2 {
       text-align: center; }
       main div div div .banner2 .title h1 .button-shop {
         background-color: yellow;
+        border-radius: 30px;
         color: black;
         text-decoration: none;
         font-size: 1rem; }
@@ -160,6 +162,7 @@ main div div div .banner2 {
       margin-top: 3%;
       font-size: 1rem;
       background-color: grey;
+      border-radius: 30px;
       border: none;
       color: white;
       padding: 0.8rem;
@@ -198,49 +201,6 @@ main div div div .banner2 {
       .mainCD .info li span {
         font-weight: bold; }
 
-.calculator {
-  grid-area: calculator;
-  margin: 10px;
-  background: #f6e9b1;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  color: #5d5c5c;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  font-family: 'Roboto', sans-serif; }
-  .calculator h4 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin: 10px;
-    padding-bottom: 50px; }
-  .calculator form {
-    text-align: start;
-    display: flex;
-    flex-direction: column; }
-    .calculator form p {
-      font-weight: bold;
-      font-size: 1.2rem; }
-  .calculator .calcCD {
-    border: 2px solid black;
-    background-color: transparent;
-    color: #5d5c5c;
-    padding: 15px;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    margin-top: 40px; }
-    .calculator .calcCD:hover {
-      cursor: pointer;
-      background-color: #6f14ed;
-      color: white;
-      border: none; }
-
 .recipes2 {
   grid-area: recipes2;
   display: flex;
@@ -248,6 +208,35 @@ main div div div .banner2 {
   justify-content: center;
   padding: 10px;
   height: 130px; }
+
+.calorie_landing {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .calorie_landing a {
+    background-color: #019980;
+    padding: 15px;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem; }
+    .calorie_landing a:hover {
+      background-color: #6f14ed; }
+
+#calculator__landingCalorie {
+  flex-direction: column; }
+  #calculator__landingCalorie .calculator__items {
+    margin-top: 70px;
+    flex-direction: column; }
+    #calculator__landingCalorie .calculator__items .calculator__gender, #calculator__landingCalorie .calculator__items .calculator__age, #calculator__landingCalorie .calculator__items .calculator__weight, #calculator__landingCalorie .calculator__items .calculator__activity, #calculator__landingCalorie .calculator__items .calculator__goal {
+      padding: 20px;
+      border: none; }
+    #calculator__landingCalorie .calculator__items .calculator__gender {
+      align-items: center; }
+      #calculator__landingCalorie .calculator__items .calculator__gender div {
+        width: fit-content;
+        padding: 0; }
 
 .cat1 {
   height: auto;
@@ -302,23 +291,24 @@ main div div div .banner2 {
   .nutriInfo h1 {
     margin: 40px;
     color: black; }
-  .nutriInfo p {
-    color: grey; }
-    .nutriInfo p span {
+  .nutriInfo h2 {
+    color: #444343;
+    font-size: 1.3rem; }
+    .nutriInfo h2 span {
       font-weight: bold; }
 
 div div h2 .protein__button {
-  background-color: #f6e9b1;
+  background-color: #f7efcf;
   font-weight: 900;
   font-size: 2rem; }
 
 div div h2 .carbs__button {
-  background-color: #bbfaee;
+  background-color: #d7f9f3;
   font-weight: 900;
   font-size: 2rem; }
 
 div div h2 .fats__button {
-  background-color: #f5caf5;
+  background-color: #f6dff6;
   font-weight: 900;
   font-size: 2rem; }
 
@@ -347,18 +337,90 @@ div div div div .fats__bg {
     font-weight: bold; }
 
 /*landing calculator---------------------------------*/
-.calculator h4 {
-  margin: 10px; }
+#bodyCalculator {
+  background-image: url(../img/banner3.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-.calculator .form {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  justify-content: left; }
-  .calculator .form .form1 {
+.calculator__container {
+  grid-area: calculator;
+  background-color: #ecf9f7;
+  padding: 30px;
+  width: 90%;
+  margin: 20px auto; }
+  .calculator__container .calculator__title {
+    text-align: center; }
+  .calculator__container .calculator__items {
     display: flex;
-    flex-direction: column;
-    margin-inline: 40px; }
+    margin: 20px;
+    justify-content: space-around; }
+    .calculator__container .calculator__items h5 {
+      font-size: 1rem; }
+    .calculator__container .calculator__items .calculator__gender {
+      text-align: center;
+      display: block;
+      padding: 60px;
+      border-right: grey solid 0.5px; }
+      .calculator__container .calculator__items .calculator__gender div .button__style {
+        border-radius: 30px;
+        margin: 3px; }
+    .calculator__container .calculator__items .calculator__age {
+      text-align: center;
+      padding: 60px;
+      border-right: grey solid 0.5px; }
+      .calculator__container .calculator__items .calculator__age div input {
+        border-radius: 30px;
+        margin: 3px;
+        padding: 5px;
+        border: grey 1px solid;
+        text-align: center; }
+    .calculator__container .calculator__items .calculator__weight {
+      text-align: center;
+      padding: 60px;
+      border-right: grey solid 0.5px; }
+      .calculator__container .calculator__items .calculator__weight .weight {
+        display: flex;
+        justify-content: center; }
+        .calculator__container .calculator__items .calculator__weight .weight div input {
+          border-radius: 30px 0 0 30px;
+          margin-top: 3px;
+          padding: 5px;
+          border: grey 1px solid;
+          text-align: center; }
+        .calculator__container .calculator__items .calculator__weight .weight div p {
+          background-color: whitesmoke;
+          border-radius: 0 30px 30px 0;
+          margin-top: 3px;
+          padding: 5px;
+          border: grey 1px solid;
+          border-left: none;
+          text-align: center; }
+    .calculator__container .calculator__items .calculator__activity {
+      text-align: center;
+      padding: 60px;
+      border-right: grey solid 0.5px; }
+      .calculator__container .calculator__items .calculator__activity div button {
+        border-radius: 30px;
+        margin: 3px; }
+    .calculator__container .calculator__items .calculator__goal {
+      text-align: center;
+      padding: 60px; }
+      .calculator__container .calculator__items .calculator__goal div button {
+        border-radius: 30px;
+        margin: 3px; }
+  .calculator__container .calculator__button {
+    display: flex;
+    justify-content: center; }
+    .calculator__container .calculator__button .button__style {
+      background-color: #019980;
+      border-radius: 30px;
+      color: white;
+      padding: 15px;
+      border: none;
+      font-weight: 600; }
+      .calculator__container .calculator__button .button__style:hover {
+        background-color: #6f14ed; }
 
 .result {
   display: flex;
@@ -381,6 +443,27 @@ div div div div .fats__bg {
     background-color: yellow;
     height: 1rem;
     padding: 5px; }
+
+.button__allRecipes {
+  display: flex;
+  padding: 15px;
+  justify-content: center; }
+  .button__allRecipes a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white; }
+  .button__allRecipes .button__allRecipes1, .button__allRecipes .button__allRecipes2, .button__allRecipes .button__allRecipes3 {
+    background-color: #019980;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: .9rem;
+    font-weight: 700;
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 50px; }
+    .button__allRecipes .button__allRecipes1:hover, .button__allRecipes .button__allRecipes2:hover, .button__allRecipes .button__allRecipes3:hover {
+      background-color: #6f14ed; }
 
 .faqs {
   text-align: center;
@@ -534,11 +617,13 @@ div div div div .fats__bg {
     text-align: justify; }
 
 .recipes__cards {
-  padding: 70px;
+  padding: 30px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: whitesmoke; }
+  .recipes__cards .card {
+    margin: 10px; }
   .recipes__cards div div .recipe-title {
     font-weight: bold;
     font-size: 1.2rem; }
@@ -614,15 +699,15 @@ div div div div .fats__bg {
       .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros {
         display: flex; }
         .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__protein {
-          background-color: #f6e9b1;
+          background-color: #f7efcf;
           padding: 12px;
           margin: 5px; }
         .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__carbs {
-          background-color: #bbfaee;
+          background-color: #d7f9f3;
           padding: 12px;
           margin: 5px; }
         .mainRecipes .recipe__main__container .recipe__title .recipe__title__macros .recipe__fats {
-          background-color: #f5caf5;
+          background-color: #f6dff6;
           padding: 12px;
           margin: 5px; }
   .mainRecipes .recipe__primary__container {
@@ -674,7 +759,8 @@ div div div div .fats__bg {
       color: white;
       font-weight: 500;
       font-size: 1.2rem;
-      padding: 10px; }
+      padding: 15px;
+      border-radius: 30px; }
       .mainRecipes .recipe__secondary__container a:hover {
         background-color: white;
         color: #019980; }
@@ -712,7 +798,7 @@ div div div div .fats__bg {
 
 /*all landing shop------------------------------------*/
 .mainShop {
-  width: 80%;
+  width: 90%;
   margin: auto; }
   .mainShop .basket__container {
     display: flex;
@@ -754,7 +840,8 @@ div div div div .fats__bg {
         text-decoration: none;
         font-size: 1rem;
         color: black;
-        font-weight: 600; }
+        font-weight: 600;
+        border-radius: 30px; }
         .mainShop .shop__main__container .shop__title div .buy__now__style:hover {
           background-color: #6f14ed;
           color: white; }
@@ -858,8 +945,9 @@ footer {
       width: 100%; }
     .banner__recipes .text__recipes {
       width: 100%;
-      margin: auto;
-      padding: 3%; }
+      margin: 20px auto;
+      padding: 3%;
+      height: fit-content; }
   .recipes__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -877,8 +965,7 @@ footer {
     .recipes__cards .card {
       margin: auto; }
   .result {
-    padding: 5%;
-    margin: 5%; }
+    padding: 5%; }
     .result .resultList {
       position: relative;
       left: auto;
@@ -933,28 +1020,16 @@ footer {
       text-align: justify; }
       .mainShop .shop__primary__container .product__description p {
         padding: 10px; }
-    .mainShop .shop__secondary__container {
-      margin-bottom: 50px; }
-      .mainShop .shop__secondary__container .other__categorie__shop {
-        flex-direction: column; }
-        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 {
-          width: 100%;
-          align-items: center; }
-          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a {
-            width: 100%; }
-            .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a img {
-              width: fit-content;
-              height: 200px;
-              margin: 5px; }
-        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
-          width: 100%;
-          align-items: center; }
-          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a {
-            width: 100%; }
-            .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a img {
-              width: fit-content;
-              height: 200px;
-              margin: 5px; } }
+  .calculator__container .calculator__items {
+    flex-direction: column; }
+    .calculator__container .calculator__items .calculator__gender, .calculator__container .calculator__items .calculator__age, .calculator__container .calculator__items .calculator__weight, .calculator__container .calculator__items .calculator__activity, .calculator__container .calculator__items .calculator__goal {
+      padding: 10px;
+      border: none; }
+    .calculator__container .calculator__items .calculator__gender {
+      align-items: center; }
+      .calculator__container .calculator__items .calculator__gender div {
+        width: fit-content;
+        padding: 0; } }
 
 /*responsive tablet vertical */
 @media screen and (max-width: 768px) {
@@ -965,7 +1040,7 @@ footer {
     margin: 3% auto;
     padding: 5%; }
     .nutriInfo h1 {
-      margin: 4px;
+      margin-bottom: 15px;
       padding: 7px;
       text-align: center;
       font-size: 3rem; }
@@ -976,18 +1051,6 @@ footer {
     padding: 7px;
     text-align: center;
     font-size: 3rem; }
-  .calculator {
-    border-radius: 0px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0; }
-    .calculator .form {
-      display: block; }
-      .calculator .form .form1 {
-        display: flex;
-        flex-direction: column;
-        margin-inline: 20px; }
   .recipes__cards {
     display: block;
     margin: auto;
@@ -1004,7 +1067,33 @@ footer {
       padding: 0px; }
   .recipe__picture h3 {
     top: 30%;
-    left: 30%; } }
+    left: 30%; }
+  .mainShop .shop__secondary__container {
+    margin-bottom: 50px; }
+    .mainShop .shop__secondary__container .other__categorie__shop {
+      flex-direction: column; }
+      .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 {
+        width: 100%;
+        align-items: center; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a {
+          width: 100%; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a img {
+            width: 50%;
+            margin: 5px; }
+      .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
+        width: 100%;
+        align-items: center; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a {
+          width: 100%; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a img {
+            width: 50%;
+            margin: 5px; }
+  .button__allRecipes {
+    flex-direction: column;
+    align-items: center; }
+    .button__allRecipes .button__allRecipes1, .button__allRecipes .button__allRecipes2 {
+      margin-bottom: 3px;
+      padding: 15px; } }
 
 /*responsive mobile*/
 @media screen and (max-width: 428px) {
@@ -1058,8 +1147,12 @@ footer {
       .mainRecipes .recipe__third__container .recipe__options .recipe__option__2 img {
         width: 100%;
         padding: 10px; }
-  .shop__variations {
-    margin-top: 15px; } }
+  .mainShop {
+    width: 100%; }
+    .mainShop .shop__main__container .shop__variations {
+      margin-top: 15px; }
+    .mainShop .shop__main__container .shop__title {
+      padding: 10px; } }
 
 @media screen and (max-width: 380px) {
   .protein__bg a {
