@@ -599,32 +599,30 @@ div{
 
 /*landing shop------------------------------------*/
 
-.main__shop{
+
+#categorieShop{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 35px;
-    .shakers__banner{
-        margin: 10px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        width: 30%;
-        min-height: 400px;
-        background-image: url(../img/shaker-banner.webp);
-        border: $color_green solid 1px;
+    width: 85%;
+    margin: 10px auto;
+    .cat4,.cat5,.cat6{
+        background-color: $color_green;
+        padding: 8%;
+        margin: 20px;
+        transition: all 0.2s ease;
         &:hover{
-            transform: scale(1.05);
-            background-image: none;
             background-color: $color_green_dark;
-            transition: all 0.2s ease;
-            .title__shop{
+            transform: scale(1.08);
+            img{
+                opacity: .2;
+            }
+            h2{
                 opacity: 1;
             }
         }
-        .title__shop{
+        h2{
             opacity: 0;
+            display: hidden;
             text-align: center;
             position:absolute;
             top: 50%;
@@ -634,73 +632,7 @@ div{
             color: white;
             font-weight: 500;
             font-size: 1.6rem;
-            padding: 30px;
-        }
-    }
-    .whey__banner{
-        margin: 10px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        width: 30%;
-        min-height: 400px;
-        background-image: url(../img/wheyprotein-banner.webp);
-        border: $color_green solid 1px;
-        &:hover{
-            transform: scale(1.05);
-            background-image: none;
-            background-color: $color_green_dark;
-            transition: all 0.2s ease;
-            .title__shop{
-                opacity: 1;
-            }
-        }
-        .title__shop{
-            opacity: 0;
-            text-align: center;
-            position:absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 30px;
-            color: white;
-            font-weight: 500;
-            font-size: 1.6rem;
-            padding: 30px;
-        }
-    }
-    .scales__banner{
-        margin: 10px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        width: 30%;
-        min-height: 400px;
-        background-image: url(../img/scales-banner.jpeg);
-        border: $color_green solid 1px;
-        &:hover{
-            transform: scale(1.05);
-            background-image: none;
-            background-color: $color_green_dark;
-            transition: all 0.2s ease;
-            .title__shop{
-                opacity: 1;
-            }
-        }
-        .title__shop{
-            opacity: 0;
-            text-align: center;
-            position:absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 30px;
-            color: white;
-            font-weight: 500;
-            font-size: 1.6rem;
-            padding: 30px;
+            z-index: 100;
         }
     }
 }
@@ -710,31 +642,34 @@ div{
     background-size: cover;
     position: relative;
     text-align: center;
-    color: rgb(85, 84, 84);
+    color: $color_green_dark;
     padding: 20px;
     h1{
         font-size: 6rem;
         font-weight: 900;
-        text-shadow: 2px 2px 2px rgb(220, 217, 217);
+        text-shadow: 7px 7px 1px $color_green;
     }
     h2{
         font-size: 3rem;
         font-style: italic;
         font-weight: 700;
-        text-shadow: 1px 1px 1px rgb(227, 224, 224)
+        text-shadow: 4px 4px 1px $color_green;
     }
     .discount__sm__banner{
-        background-color: $color_green;
+        background-color: #ecf9f7;
         width: 600px;
         margin: auto;
         padding: 10px;
         h3{
             padding: 15px;
-            color: white;
+            color: $color_green_dark;
+            font-size: 1rem;
+            font-weight: 400;
             span{
-                background-color: white;
+                background-color: transparent;
+                border: $color_green_dark solid 1px;
                 padding: 15px;
-                color: $color_green;
+                color: $color_green_dark;
                 font-weight: 700;
                 border-radius: 30px;
                 font-size: 1.2rem;
@@ -742,7 +677,7 @@ div{
         }
         p{
             padding: 10px;
-            color: white;
+            color: $color_green_dark;
         }
     }
 }
@@ -1162,42 +1097,33 @@ div{
         .other__categorie__shop{
             display: flex;
             width: 100%;
+            justify-content: center;
             .categorie_1{
-                width: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                flex-direction: column;
-                a{
-                    width: 70%;
-                    text-align: center;
-                    color: black;
-                    img{
-                        width: 50%;
-                        &:hover{
-                            opacity: 0.6;
-                        }
-                    }
-                }
+               @include categoriesShop()
             }
             .categorie_2{
-                width: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                flex-direction: column;
-                a{
-                    width: 50%;
-                    text-align:center;
-                    color: black;
-                    img{
-                        width: 70%;
-                        &:hover{
-                            opacity: 0.6;
-                        }
-                    }
-                }
+                @include categoriesShop()
             }
         }
     }
+}
+@mixin categoriesShop {
+    display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                background-color: $color_green;
+                margin: 10px;
+                padding: 30px;
+                a{
+                    text-decoration: none;
+                    h5{
+                        padding: 8px;
+                        text-align: center;
+                        color: white;
+                    }
+                }
+                &:hover{
+                    background-color: $color_green_dark;
+                    transform: scale(1.08);
+                }
 }

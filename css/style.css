@@ -480,30 +480,26 @@ div div div div .fats__bg {
   font-weight: 900; }
 
 /*landing shop------------------------------------*/
-.main__shop {
+#categorieShop {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 35px; }
-  .main__shop .shakers__banner {
-    margin: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 30%;
-    min-height: 400px;
-    background-image: url(../img/shaker-banner.webp);
-    border: #019980 solid 1px; }
-    .main__shop .shakers__banner:hover {
-      transform: scale(1.05);
-      background-image: none;
+  width: 85%;
+  margin: 10px auto; }
+  #categorieShop .cat4, #categorieShop .cat5, #categorieShop .cat6 {
+    background-color: #019980;
+    padding: 8%;
+    margin: 20px;
+    transition: all 0.2s ease; }
+    #categorieShop .cat4:hover, #categorieShop .cat5:hover, #categorieShop .cat6:hover {
       background-color: #005648;
-      transition: all 0.2s ease; }
-      .main__shop .shakers__banner:hover .title__shop {
+      transform: scale(1.08); }
+      #categorieShop .cat4:hover img, #categorieShop .cat5:hover img, #categorieShop .cat6:hover img {
+        opacity: .2; }
+      #categorieShop .cat4:hover h2, #categorieShop .cat5:hover h2, #categorieShop .cat6:hover h2 {
         opacity: 1; }
-    .main__shop .shakers__banner .title__shop {
+    #categorieShop .cat4 h2, #categorieShop .cat5 h2, #categorieShop .cat6 h2 {
       opacity: 0;
+      display: hidden;
       text-align: center;
       position: absolute;
       top: 50%;
@@ -513,65 +509,7 @@ div div div div .fats__bg {
       color: white;
       font-weight: 500;
       font-size: 1.6rem;
-      padding: 30px; }
-  .main__shop .whey__banner {
-    margin: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 30%;
-    min-height: 400px;
-    background-image: url(../img/wheyprotein-banner.webp);
-    border: #019980 solid 1px; }
-    .main__shop .whey__banner:hover {
-      transform: scale(1.05);
-      background-image: none;
-      background-color: #005648;
-      transition: all 0.2s ease; }
-      .main__shop .whey__banner:hover .title__shop {
-        opacity: 1; }
-    .main__shop .whey__banner .title__shop {
-      opacity: 0;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 30px;
-      color: white;
-      font-weight: 500;
-      font-size: 1.6rem;
-      padding: 30px; }
-  .main__shop .scales__banner {
-    margin: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    width: 30%;
-    min-height: 400px;
-    background-image: url(../img/scales-banner.jpeg);
-    border: #019980 solid 1px; }
-    .main__shop .scales__banner:hover {
-      transform: scale(1.05);
-      background-image: none;
-      background-color: #005648;
-      transition: all 0.2s ease; }
-      .main__shop .scales__banner:hover .title__shop {
-        opacity: 1; }
-    .main__shop .scales__banner .title__shop {
-      opacity: 0;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 30px;
-      color: white;
-      font-weight: 500;
-      font-size: 1.6rem;
-      padding: 30px; }
+      z-index: 100; }
 
 .discount__banner {
   background-image: url(../img/calculator-banner2.webp);
@@ -579,35 +517,38 @@ div div div div .fats__bg {
   background-size: cover;
   position: relative;
   text-align: center;
-  color: #555454;
+  color: #005648;
   padding: 20px; }
   .discount__banner h1 {
     font-size: 6rem;
     font-weight: 900;
-    text-shadow: 2px 2px 2px #dcd9d9; }
+    text-shadow: 7px 7px 1px #019980; }
   .discount__banner h2 {
     font-size: 3rem;
     font-style: italic;
     font-weight: 700;
-    text-shadow: 1px 1px 1px #e3e0e0; }
+    text-shadow: 4px 4px 1px #019980; }
   .discount__banner .discount__sm__banner {
-    background-color: #019980;
+    background-color: #ecf9f7;
     width: 600px;
     margin: auto;
     padding: 10px; }
     .discount__banner .discount__sm__banner h3 {
       padding: 15px;
-      color: white; }
+      color: #005648;
+      font-size: 1rem;
+      font-weight: 400; }
       .discount__banner .discount__sm__banner h3 span {
-        background-color: white;
+        background-color: transparent;
+        border: #005648 solid 1px;
         padding: 15px;
-        color: #019980;
+        color: #005648;
         font-weight: 700;
         border-radius: 30px;
         font-size: 1.2rem; }
     .discount__banner .discount__sm__banner p {
       padding: 10px;
-      color: white; }
+      color: #005648; }
 
 /*main landing recipes---------------------------------*/
 .banner__recipes {
@@ -940,35 +881,40 @@ div div div div .fats__bg {
     margin-bottom: 50px; }
     .mainShop .shop__secondary__container .other__categorie__shop {
       display: flex;
-      width: 100%; }
+      width: 100%;
+      justify-content: center; }
       .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 {
-        width: 50%;
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        flex-direction: column; }
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #019980;
+        margin: 10px;
+        padding: 30px; }
         .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a {
-          width: 70%;
-          text-align: center;
-          color: black; }
-          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a img {
-            width: 50%; }
-            .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a img:hover {
-              opacity: 0.6; }
+          text-decoration: none; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a h5 {
+            padding: 8px;
+            text-align: center;
+            color: white; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1:hover {
+          background-color: #005648;
+          transform: scale(1.08); }
       .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
-        width: 50%;
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column; }
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #019980;
+        margin: 10px;
+        padding: 30px; }
         .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a {
-          width: 50%;
-          text-align: center;
-          color: black; }
-          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a img {
-            width: 70%; }
-            .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a img:hover {
-              opacity: 0.6; }
+          text-decoration: none; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a h5 {
+            padding: 8px;
+            text-align: center;
+            color: white; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2:hover {
+          background-color: #005648;
+          transform: scale(1.08); }
 
 footer {
   border-top: #b1b0b0 1px solid;
@@ -1039,12 +985,14 @@ footer {
       background-color: transparent; }
   .row__recipes {
     display: block; }
-  .main__shop {
+  #categorieShop {
     flex-direction: column;
-    margin: 20px;
-    padding: 20px; }
-    .main__shop .shakers__banner, .main__shop .whey__banner, .main__shop .scales__banner {
-      width: 100%; }
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    align-items: center; }
+    #categorieShop .cat4, #categorieShop .cat5, #categorieShop .cat6 {
+      padding: 25%; }
   .mainRecipes {
     width: 100%; }
     .mainRecipes .recipe__main__container {
@@ -1141,22 +1089,10 @@ footer {
     margin-bottom: 50px; }
     .mainShop .shop__secondary__container .other__categorie__shop {
       flex-direction: column; }
-      .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 {
+      .mainShop .shop__secondary__container .other__categorie__shop .categorie_1, .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
         width: 100%;
-        align-items: center; }
-        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a {
-          width: 100%; }
-          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a img {
-            width: 50%;
-            margin: 5px; }
-      .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
-        width: 100%;
-        align-items: center; }
-        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a {
-          width: 100%; }
-          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a img {
-            width: 50%;
-            margin: 5px; }
+        align-items: center;
+        justify-content: center; }
   .button__allRecipes {
     flex-direction: column;
     align-items: center; }
