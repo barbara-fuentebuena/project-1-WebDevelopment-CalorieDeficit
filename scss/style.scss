@@ -132,7 +132,9 @@ footer{
     }
     .main__shop{
         flex-direction: column;
-        margin: 10px;
+        margin: 20px;
+        padding: 20px;
+
         .shakers__banner,.whey__banner,.scales__banner{
             width: 100%;
         }
@@ -221,8 +223,21 @@ footer{
        margin: 0;
     }
     .nutriInfo{
-        margin: 5px;
-        padding: 0;
+        margin: 0;
+        padding: 50px;
+        h1{
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+        h2{
+            text-align: justify;
+        }
+        .info1{
+            .nutri__text{
+                padding: 0;
+                margin: 0;
+            }
+        }
         img{
             display: none;
         }
@@ -297,6 +312,11 @@ footer{
             padding: 15px;
         }
     }
+    .discount__banner{
+        .discount__sm__banner{
+            width: fit-content;
+        }
+    }
 }
 
 /*responsive mobile*/
@@ -319,6 +339,17 @@ footer{
             img{
                 height: 300px;
                 width: auto;
+            }
+        }
+    }
+    .nutriInfo{
+        padding: 5%;
+        p{
+            margin-bottom: 40px;
+        }
+        .accordion{
+            h2{
+                padding: 0;
             }
         }
     }
@@ -381,6 +412,22 @@ footer{
             }
             .shop__title{
                 padding: 10px;
+            }
+        }
+    }
+    .discount__banner{
+        h1{
+            font-size: 3.5rem;
+        }
+        h2{
+            font-size: 1.7rem;
+        }
+        h3{
+            font-size: 1rem;
+            padding: 10px;
+            span{
+                padding: 5px;
+                font-size: 1rem;
             }
         }
     }

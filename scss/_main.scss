@@ -345,7 +345,6 @@ main{
         .nutri__text{
             padding: 20px;
             margin: 20px;
-            line-height: 2rem;
             display: flex;
             flex-direction: column;
             h1{
@@ -613,21 +612,24 @@ div{
         position: relative;
         width: 30%;
         min-height: 400px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/shaker-banner.webp);
+        background-image: url(../img/shaker-banner.webp);
+        border: $color_green solid 1px;
         &:hover{
             transform: scale(1.05);
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/shaker-banner.webp);
+            background-image: none;
+            background-color: $color_green_dark;
+            transition: all 0.2s ease;
             .title__shop{
-                display: none;
+                opacity: 1;
             }
         }
         .title__shop{
+            opacity: 0;
             text-align: center;
             position:absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $color_green;
             border-radius: 30px;
             color: white;
             font-weight: 500;
@@ -643,21 +645,24 @@ div{
         position: relative;
         width: 30%;
         min-height: 400px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/wheyprotein-banner.webp);
+        background-image: url(../img/wheyprotein-banner.webp);
+        border: $color_green solid 1px;
         &:hover{
             transform: scale(1.05);
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/wheyprotein-banner.webp);
+            background-image: none;
+            background-color: $color_green_dark;
+            transition: all 0.2s ease;
             .title__shop{
-                display: none;
+                opacity: 1;
             }
         }
         .title__shop{
+            opacity: 0;
             text-align: center;
             position:absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $color_green;
             border-radius: 30px;
             color: white;
             font-weight: 500;
@@ -673,26 +678,71 @@ div{
         position: relative;
         width: 30%;
         min-height: 400px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/scales-banner.jpeg);
+        background-image: url(../img/scales-banner.jpeg);
+        border: $color_green solid 1px;
         &:hover{
             transform: scale(1.05);
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/scales-banner.jpeg);
+            background-image: none;
+            background-color: $color_green_dark;
+            transition: all 0.2s ease;
             .title__shop{
-                display: none;
+                opacity: 1;
             }
         }
         .title__shop{
+            opacity: 0;
             text-align: center;
             position:absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $color_green;
             border-radius: 30px;
             color: white;
             font-weight: 500;
             font-size: 1.6rem;
             padding: 30px;
+        }
+    }
+}
+.discount__banner{
+    background-image: url(../img/calculator-banner2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: rgb(85, 84, 84);
+    padding: 20px;
+    h1{
+        font-size: 6rem;
+        font-weight: 900;
+        text-shadow: 2px 2px 2px rgb(220, 217, 217);
+    }
+    h2{
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: 700;
+        text-shadow: 1px 1px 1px rgb(227, 224, 224)
+    }
+    .discount__sm__banner{
+        background-color: $color_green;
+        width: 600px;
+        margin: auto;
+        padding: 10px;
+        h3{
+            padding: 15px;
+            color: white;
+            span{
+                background-color: white;
+                padding: 15px;
+                color: $color_green;
+                font-weight: 700;
+                border-radius: 30px;
+                font-size: 1.2rem;
+            }
+        }
+        p{
+            padding: 10px;
+            color: white;
         }
     }
 }
@@ -778,9 +828,13 @@ div{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: #ecf9f7;
     .card{
         margin: 10px;
+        border-radius: 0;
+        img{
+            border-radius: 0;
+        }
     }
     div{
         div{
@@ -954,8 +1008,7 @@ div{
             padding: 15px;
             border-radius: 30px;
             &:hover{
-                background-color: white;
-                color: $color_green;
+                background-color: $color_purple;
             }
         }
     }
