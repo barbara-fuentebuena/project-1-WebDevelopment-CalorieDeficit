@@ -10,8 +10,38 @@ body {
     font-size: 4rem;
     text-align: center; }
 
-header .logo img {
+header nav .logo img {
   width: 7rem; }
+
+header nav .btn__search {
+  border: 1px solid #019980;
+  border-radius: 30px 0px 0px 30px; }
+
+header nav .btn__color {
+  background-color: #019980;
+  border: none;
+  border-radius: 0px 30px 30px 0px; }
+
+header nav a:hover {
+  text-decoration: underline; }
+
+header a .messenger {
+  background-color: white;
+  color: #019980;
+  position: fixed;
+  top: 90%;
+  left: 95%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  border: 1px solid #019980;
+  border-radius: 30px;
+  z-index: 100; }
+  header a .messenger:hover {
+    background-color: #6f14ed;
+    color: white;
+    border: none; }
 
 /*index------------------------------------------*/
 main div div div .banner1 {
@@ -20,7 +50,7 @@ main div div div .banner1 {
   background-size: cover;
   position: relative;
   min-height: 500px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner3.jpeg"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/banner3.jpeg"); }
   main div div div .banner1 .title {
     position: absolute;
     padding: 20px;
@@ -49,7 +79,7 @@ main div div div .banner2 {
   background-size: cover;
   position: relative;
   min-height: 500px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/whey-protein-banner.jpeg"); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/whey-protein-banner.jpeg"); }
   main div div div .banner2 .title {
     position: absolute;
     padding: 20px;
@@ -550,6 +580,122 @@ div div div div .fats__bg {
       padding: 10px;
       color: #005648; }
 
+/*all landing shop------------------------------------*/
+.mainShop {
+  width: 90%;
+  margin: auto; }
+  .mainShop .basket__container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px; }
+    .mainShop .basket__container .basket__items {
+      display: flex;
+      width: fit-content;
+      padding: 10px;
+      border: black solid 0.5px;
+      border-radius: 5px; }
+      .mainShop .basket__container .basket__items p {
+        margin: 5px; }
+      .mainShop .basket__container .basket__items svg {
+        margin: 5px; }
+  .mainShop .shop__main__container {
+    display: flex;
+    margin: 15px;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center; }
+    .mainShop .shop__main__container .shop__picture {
+      width: 50%; }
+      .mainShop .shop__main__container .shop__picture img {
+        width: 100%; }
+    .mainShop .shop__main__container .shop__title {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      align-items: flex-end;
+      text-align: justify; }
+      .mainShop .shop__main__container .shop__title p {
+        color: grey; }
+      .mainShop .shop__main__container .shop__title div .buy__now__style {
+        background-color: yellow;
+        padding: 15px;
+        border: none;
+        text-decoration: none;
+        font-size: 1rem;
+        color: black;
+        font-weight: 600;
+        border-radius: 30px; }
+        .mainShop .shop__main__container .shop__title div .buy__now__style:hover {
+          background-color: #6f14ed;
+          color: white; }
+    .mainShop .shop__main__container .shop__icons {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      .mainShop .shop__main__container .shop__icons .heart {
+        margin: 5px;
+        padding: 10px; }
+        .mainShop .shop__main__container .shop__icons .heart:hover {
+          color: red;
+          cursor: pointer; }
+      .mainShop .shop__main__container .shop__icons .cart {
+        margin: 5px;
+        padding: 10px; }
+        .mainShop .shop__main__container .shop__icons .cart:hover {
+          color: #026202;
+          cursor: pointer; }
+      .mainShop .shop__main__container .shop__icons .share {
+        margin: 5px;
+        padding: 10px; }
+        .mainShop .shop__main__container .shop__icons .share:hover {
+          color: #0502a3;
+          cursor: pointer; }
+  .mainShop .shop__primary__container .product__description {
+    background-color: whitesmoke;
+    display: block;
+    padding: 20px;
+    text-align: justify; }
+  .mainShop .shop__secondary__container {
+    margin-bottom: 50px; }
+    .mainShop .shop__secondary__container .other__categorie__shop {
+      display: flex;
+      width: 100%;
+      justify-content: center; }
+      .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #019980;
+        margin: 10px;
+        padding: 30px; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a {
+          text-decoration: none; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a h5 {
+            padding: 8px;
+            text-align: center;
+            color: white; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1:hover {
+          background-color: #005648;
+          transform: scale(1.08); }
+      .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: #019980;
+        margin: 10px;
+        padding: 30px; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a {
+          text-decoration: none; }
+          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a h5 {
+            padding: 8px;
+            text-align: center;
+            color: white; }
+        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2:hover {
+          background-color: #005648;
+          transform: scale(1.08); }
+
 /*main landing recipes---------------------------------*/
 .banner__recipes {
   display: flex; }
@@ -800,122 +946,6 @@ div div div div .fats__bg {
         .mainRecipes .recipe__third__container .recipe__options .recipe__option__2 a {
           color: black; }
 
-/*all landing shop------------------------------------*/
-.mainShop {
-  width: 90%;
-  margin: auto; }
-  .mainShop .basket__container {
-    display: flex;
-    justify-content: flex-end;
-    margin: 30px; }
-    .mainShop .basket__container .basket__items {
-      display: flex;
-      width: fit-content;
-      padding: 10px;
-      border: black solid 0.5px;
-      border-radius: 5px; }
-      .mainShop .basket__container .basket__items p {
-        margin: 5px; }
-      .mainShop .basket__container .basket__items svg {
-        margin: 5px; }
-  .mainShop .shop__main__container {
-    display: flex;
-    margin: 15px;
-    padding: 15px;
-    justify-content: space-around;
-    align-items: center; }
-    .mainShop .shop__main__container .shop__picture {
-      width: 50%; }
-      .mainShop .shop__main__container .shop__picture img {
-        width: 100%; }
-    .mainShop .shop__main__container .shop__title {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      padding: 30px;
-      align-items: flex-end;
-      text-align: justify; }
-      .mainShop .shop__main__container .shop__title p {
-        color: grey; }
-      .mainShop .shop__main__container .shop__title div .buy__now__style {
-        background-color: yellow;
-        padding: 15px;
-        border: none;
-        text-decoration: none;
-        font-size: 1rem;
-        color: black;
-        font-weight: 600;
-        border-radius: 30px; }
-        .mainShop .shop__main__container .shop__title div .buy__now__style:hover {
-          background-color: #6f14ed;
-          color: white; }
-    .mainShop .shop__main__container .shop__icons {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 10px;
-      margin-bottom: 10px; }
-      .mainShop .shop__main__container .shop__icons .heart {
-        margin: 5px;
-        padding: 10px; }
-        .mainShop .shop__main__container .shop__icons .heart:hover {
-          color: red;
-          cursor: pointer; }
-      .mainShop .shop__main__container .shop__icons .cart {
-        margin: 5px;
-        padding: 10px; }
-        .mainShop .shop__main__container .shop__icons .cart:hover {
-          color: #026202;
-          cursor: pointer; }
-      .mainShop .shop__main__container .shop__icons .share {
-        margin: 5px;
-        padding: 10px; }
-        .mainShop .shop__main__container .shop__icons .share:hover {
-          color: #0502a3;
-          cursor: pointer; }
-  .mainShop .shop__primary__container .product__description {
-    background-color: whitesmoke;
-    display: block;
-    padding: 20px;
-    text-align: justify; }
-  .mainShop .shop__secondary__container {
-    margin-bottom: 50px; }
-    .mainShop .shop__secondary__container .other__categorie__shop {
-      display: flex;
-      width: 100%;
-      justify-content: center; }
-      .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        background-color: #019980;
-        margin: 10px;
-        padding: 30px; }
-        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a {
-          text-decoration: none; }
-          .mainShop .shop__secondary__container .other__categorie__shop .categorie_1 a h5 {
-            padding: 8px;
-            text-align: center;
-            color: white; }
-        .mainShop .shop__secondary__container .other__categorie__shop .categorie_1:hover {
-          background-color: #005648;
-          transform: scale(1.08); }
-      .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        background-color: #019980;
-        margin: 10px;
-        padding: 30px; }
-        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a {
-          text-decoration: none; }
-          .mainShop .shop__secondary__container .other__categorie__shop .categorie_2 a h5 {
-            padding: 8px;
-            text-align: center;
-            color: white; }
-        .mainShop .shop__secondary__container .other__categorie__shop .categorie_2:hover {
-          background-color: #005648;
-          transform: scale(1.08); }
-
 footer {
   border-top: #b1b0b0 1px solid;
   color: black;
@@ -939,6 +969,8 @@ footer {
 /* responsive */
 /*responsive tablet horizontal */
 @media screen and (max-width: 934px) {
+  header a .messenger {
+    left: 93%; }
   .container1 {
     margin: 7px;
     grid-template-columns: repeat 2, 1fr;
@@ -1047,6 +1079,8 @@ footer {
 
 /*responsive tablet vertical */
 @media screen and (max-width: 768px) {
+  header a .messenger {
+    left: 90%; }
   .mainCD {
     display: block;
     margin: 0; }
@@ -1104,6 +1138,8 @@ footer {
 
 /*responsive mobile*/
 @media screen and (max-width: 428px) {
+  header a .messenger {
+    display: none; }
   p {
     margin: 0 auto;
     padding: 0; }
@@ -1175,7 +1211,9 @@ footer {
     padding: 10px; }
     .discount__banner h3 span {
       padding: 5px;
-      font-size: 1rem; } }
+      font-size: 1rem; }
+  .discount__banner .discount__sm__banner h3 {
+    line-height: 3rem; } }
 
 @media screen and (max-width: 380px) {
   .protein__bg a {

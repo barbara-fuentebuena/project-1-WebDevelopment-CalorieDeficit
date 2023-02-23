@@ -1,0 +1,87 @@
+.nutriInfo{
+    text-align: justify;
+    margin: 50px;
+    font-family: 'Roboto', sans-serif;
+    .info1{
+        display: flex;
+        img{
+            padding: 20px;
+            margin: 20px;
+        }
+        .nutri__text{
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            h1{
+                margin: 40px;
+                color: black;
+            }
+            h2{
+                color: rgb(68, 67, 67);
+                font-size: 1.3rem;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+div{
+    div{
+        h2{
+            .protein__button{
+                background-color: $color_proteins;
+                font-weight: 900;
+                font-size: 2rem;
+            }
+            .carbs__button{
+                background-color: $color_carbs;
+                font-weight: 900;
+                font-size: 2rem;
+            }
+            .fats__button{
+                background-color: $color_fats;
+                font-weight: 900;
+                font-size: 2rem;
+            }
+        }
+        div{
+            div{
+                .protein__bg{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    overflow: hidden;
+                    li{
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .carbs__bg{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    overflow: hidden;
+                    li{
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .fats__bg{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    overflow: hidden;
+                    li{
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

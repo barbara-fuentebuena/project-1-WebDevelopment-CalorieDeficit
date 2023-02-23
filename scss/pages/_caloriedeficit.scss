@@ -1,0 +1,127 @@
+.mainCD{
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: 
+    "info info info info calculator calculator"
+    "recipes2 recipes2 recipes2 recipes2 recipes2 recipes2"
+    "cat1 cat1 cat2 cat2 cat3 cat3";
+    .info{
+        grid-area: info;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        font-family:'Roboto', sans-serif;
+        h1{
+            margin-bottom: 50px;
+        }
+        img{
+            height: 600px;
+            padding: 25px;
+        }
+        p{
+            text-align: justify;
+        }
+        li{
+            width: 80%;
+            padding: 10px;
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+}
+.recipes2{
+    grid-area: recipes2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px;
+    height: 130px;
+}
+.calorie_landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        background-color: $color_green;
+        padding: 15px;
+        color: white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        &:hover{
+            background-color: $color_purple;
+        }
+    }
+}
+#calculator__landingCalorie{
+    flex-direction: column;
+    .calculator__items{ 
+        margin-top: 70px;
+        flex-direction: column;
+        .calculator__gender,.calculator__age,.calculator__weight,.calculator__activity,.calculator__goal{
+            padding: 20px;
+            border: none;
+        }
+        .calculator__gender{
+            align-items: center;
+            div{
+                width: fit-content;
+                padding: 0;
+            }
+        }
+    } 
+}
+.cat1{
+    height: auto;
+    grid-area: cat1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color_green;
+    padding: 15%;
+    margin: 12px;
+    transition: all 0.2s ease;
+    &:hover{
+        background-color: $color_green_dark;
+        transform: scale(1.08);
+    }
+}
+.cat2{
+    height: auto;
+    grid-area: cat2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color_green;
+    padding: 15%;
+    margin: 12px;
+    transition: all 0.2s ease;
+    &:hover{
+        background-color: $color_green_dark;
+        transform: scale(1.08);
+    }
+}
+.cat3{
+    height: auto;
+    grid-area: cat3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color_green;
+    padding: 15%;
+    margin: 12px;
+    transition: all 0.2s ease;
+    &:hover{
+        background-color: $color_green_dark;
+        transform: scale(1.08);
+    }
+}

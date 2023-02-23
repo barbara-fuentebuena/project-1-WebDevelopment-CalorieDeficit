@@ -1,0 +1,200 @@
+@mixin mainBanner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 500px;
+}
+
+main{
+    div{
+        div{
+            div{
+                .banner1{
+                    @include mainBanner;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/banner3.jpeg");
+                    .title{
+                        position:absolute;
+                        padding: 20px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius:5px;
+                        h1{             
+                            font-family:'Roboto', sans-serif;
+                            font-size: 4rem;
+                            font-weight: bolder;
+                            color: white;
+                            text-align: center;
+                            .title__button{
+                                background-color: $color_green;
+                                border-radius: 30px;
+                                color: white;
+                                text-decoration: none;
+                                font-size: 1rem;
+                                &:hover{
+                                    background-color: $color_purple;
+                                }
+                            }
+                        }
+                    }
+                }
+                .banner2{
+                    @include mainBanner;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/whey-protein-banner.jpeg");
+                    .title{
+                        position:absolute;
+                        padding: 20px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        border-radius:5px;
+                        h1{
+                            font-family:'Roboto', sans-serif;
+                            font-size: 4rem;
+                            font-weight: bolder;
+                            color: white;
+                            text-align: center;
+                            .button-shop{
+                                background-color: yellow;
+                                border-radius: 30px;
+                                color: black;
+                                text-decoration: none;
+                                font-size: 1rem;
+                                &:hover{
+                                    background-color: $color_purple;
+                                    color: white;
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+
+/* section index*/
+
+.container1{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat (6, 1fr);
+    grid-template-rows: repeat (3, 1fr);
+    grid-template-areas:
+    "recipes recipes recipes recipes recipes recipes"
+    "cat1 cat1 cat2 cat2 cat3 cat3"
+    "newsletter newsletter newsletter newsletter newsletter newsletter";
+    .recipes{
+        grid-area: recipes;
+        h2{
+            font-family:'Roboto', sans-serif;
+            font-size: 1.5rem;
+            color: black;
+            font-weight: normal;
+            text-align: center;
+            padding: 2%;
+        }
+    }
+    .cat1{
+        height: auto;
+        grid-area: cat1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $color_green;
+        padding: 15%;
+        margin: 12px;
+        transition: all 0.2s ease;
+        &:hover{
+            background-color: $color_green_dark;
+            transform: scale(1.08);
+        }
+    }
+    .cat2{
+        height: auto;
+        grid-area: cat2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $color_green;
+        padding: 15%;
+        margin: 12px;
+        transition: all 0.2s ease;
+        &:hover{
+            background-color: $color_green_dark;
+            transform: scale(1.08);
+        }
+    }
+    .cat3{
+        height: auto;
+        grid-area: cat3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $color_green;
+        padding: 15%;
+        margin: 12px;
+        transition: all 0.2s ease;
+        &:hover{
+            background-color: $color_green_dark;
+            transform: scale(1.08);
+        }
+    }
+}
+.newsletter{
+    height: auto;
+    grid-area: newsletter;
+    padding: 3%;
+    #newsletter{
+        background-color: white;
+        text-align: center;
+        align-content: center;
+        padding: 2%;
+        color: black;
+        font-weight: lighter;
+        font-family:'Roboto', sans-serif;
+        .containernews1{
+            h3{
+                font-size: 3rem;
+                color: black;
+                font-weight: lighter;
+            }
+            p{
+                font-weight: lighter;
+            }
+        }
+        .containernews2{
+            input{
+                margin-inline: 1.3rem;
+                margin-top: 1.5%;
+                border: double;
+                border-color: $color_green;
+                padding: 0.5rem;
+                width: 17rem;
+                background-color: white;
+            }
+        }
+        .containernews3{
+            input{
+                margin-top: 3%;
+                font-size: 1rem;
+                background-color: grey;
+                border-radius: 30px;
+                border: none;
+                color:  white;
+                padding: 0.8rem;
+                width: 10rem;
+                font-size: 1rem;
+                font-weight: bold;
+                &:hover{
+                    background-color: $color_purple;
+                    color: white;
+                }
+            }
+        }
+    }
+}
