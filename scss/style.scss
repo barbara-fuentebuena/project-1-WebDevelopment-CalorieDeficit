@@ -140,24 +140,33 @@ body{
     }
     .mainShop{
         width: 100%;  
-
-        .shop__main__container{
-            display: block;
-            .shop__picture{
-                width: 100%;
-                img{
+        .mainShopContainer{
+            flex-direction: column;
+            .basket__container{
+                width: 90%;
+                height: 300px;
+            }
+            .shop__main__container{
+                width: 90%;
+                flex-direction: column;
+                .shop__picture{
                     width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .shop__title{
+                    width: 100%;
+                    align-items: flex-start;
+                }
+                .shop__icons{
+                    display: flex;
+                    justify-content: flex-start;
                 }
             }
-            .shop__title{
-                width: 100%;
-                align-items: flex-start;
-            }
-            .shop__icons{
-                display: flex;
-                justify-content: flex-start;
-            }
         }
+
+        
         .shop__primary__container{
             .product__description{
                 background-color: whitesmoke;

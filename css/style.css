@@ -108,7 +108,7 @@ main div div div .banner2 {
   margin: 50px;
   display: grid;
   grid-template-columns: repeat 6, 1fr;
-  grid-template-rows: repeat 3, 1fr;
+  grid-template-rows: repeat 3, auto;
   grid-template-areas: "recipes recipes recipes recipes recipes recipes" "cat1 cat1 cat2 cat2 cat3 cat3" "newsletter newsletter newsletter newsletter newsletter newsletter"; }
   .container1 .recipes {
     grid-area: recipes; }
@@ -209,7 +209,7 @@ main div div div .banner2 {
   margin: 50px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr auto auto;
-  grid-template-areas: "info info info info calculator calculator" "recipes2 recipes2 recipes2 recipes2 recipes2 recipes2" "cat1 cat1 cat2 cat2 cat3 cat3"; }
+  grid-template-areas: "info info info info info info" "recipes2 recipes2 recipes2 recipes2 recipes2 recipes2" "cat1 cat1 cat2 cat2 cat3 cat3"; }
   .mainCD .info {
     grid-area: info;
     height: auto;
@@ -238,35 +238,6 @@ main div div div .banner2 {
   justify-content: center;
   padding: 10px;
   height: 130px; }
-
-.calorie_landing {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .calorie_landing a {
-    background-color: #019980;
-    padding: 15px;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem; }
-    .calorie_landing a:hover {
-      background-color: #6f14ed; }
-
-#calculator__landingCalorie {
-  flex-direction: column; }
-  #calculator__landingCalorie .calculator__items {
-    margin-top: 70px;
-    flex-direction: column; }
-    #calculator__landingCalorie .calculator__items .calculator__gender, #calculator__landingCalorie .calculator__items .calculator__age, #calculator__landingCalorie .calculator__items .calculator__weight, #calculator__landingCalorie .calculator__items .calculator__activity, #calculator__landingCalorie .calculator__items .calculator__goal {
-      padding: 20px;
-      border: none; }
-    #calculator__landingCalorie .calculator__items .calculator__gender {
-      align-items: center; }
-      #calculator__landingCalorie .calculator__items .calculator__gender div {
-        width: fit-content;
-        padding: 0; }
 
 .cat1 {
   height: auto;
@@ -383,84 +354,116 @@ div div div div .fats__bg {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.calculator__container {
-  grid-area: calculator;
-  background-color: #ecf9f7;
-  padding: 30px;
-  width: 90%;
-  margin: 20px auto; }
-  .calculator__container .calculator__title {
+body {
+  font-family: 'Roboto', sans-serif; }
+  body header {
     text-align: center; }
-  .calculator__container .calculator__items {
+    body header h1 {
+      font-weight: bold; }
+  body .mainContainer {
     display: flex;
-    margin: 20px;
-    justify-content: space-around; }
-    .calculator__container .calculator__items h5 {
-      font-size: 1rem; }
-    .calculator__container .calculator__items .calculator__gender {
-      text-align: center;
-      display: block;
-      padding: 60px;
-      border-right: grey solid 0.5px; }
-      .calculator__container .calculator__items .calculator__gender div .button__style {
-        border-radius: 30px;
-        margin: 3px; }
-    .calculator__container .calculator__items .calculator__age {
-      text-align: center;
-      padding: 60px;
-      border-right: grey solid 0.5px; }
-      .calculator__container .calculator__items .calculator__age div input {
-        border-radius: 30px;
-        margin: 3px;
-        padding: 5px;
-        border: grey 1px solid;
-        text-align: center; }
-    .calculator__container .calculator__items .calculator__weight {
-      text-align: center;
-      padding: 60px;
-      border-right: grey solid 0.5px; }
-      .calculator__container .calculator__items .calculator__weight .weight {
+    background-color: #dbf4e9;
+    margin: 20px auto;
+    width: 65%; }
+    body .mainContainer .titleContainer {
+      width: 40%;
+      padding: 25px;
+      border-right: solid black .1px; }
+      body .mainContainer .titleContainer p {
+        font-weight: 300;
+        text-align: justify; }
+    body .mainContainer .inputsContainer {
+      width: 60%;
+      padding: 15px; }
+      body .mainContainer .inputsContainer .nameContainer {
         display: flex;
-        justify-content: center; }
-        .calculator__container .calculator__items .calculator__weight .weight div input {
-          border-radius: 30px 0 0 30px;
-          margin-top: 3px;
-          padding: 5px;
-          border: grey 1px solid;
-          text-align: center; }
-        .calculator__container .calculator__items .calculator__weight .weight div p {
-          background-color: whitesmoke;
-          border-radius: 0 30px 30px 0;
-          margin-top: 3px;
-          padding: 5px;
-          border: grey 1px solid;
-          border-left: none;
-          text-align: center; }
-    .calculator__container .calculator__items .calculator__activity {
-      text-align: center;
-      padding: 60px;
-      border-right: grey solid 0.5px; }
-      .calculator__container .calculator__items .calculator__activity div button {
-        border-radius: 30px;
-        margin: 3px; }
-    .calculator__container .calculator__items .calculator__goal {
-      text-align: center;
-      padding: 60px; }
-      .calculator__container .calculator__items .calculator__goal div button {
-        border-radius: 30px;
-        margin: 3px; }
-  .calculator__container .calculator__button {
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px; }
+        body .mainContainer .inputsContainer .nameContainer .emailInput {
+          background-color: white;
+          border: black solid .5px;
+          margin: 2px;
+          padding: 10px;
+          border-radius: 30px;
+          width: 200px; }
+      body .mainContainer .inputsContainer .calculatorContainer {
+        padding: 2px;
+        margin: auto; }
+        body .mainContainer .inputsContainer .calculatorContainer div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px; }
+          body .mainContainer .inputsContainer .calculatorContainer div input, body .mainContainer .inputsContainer .calculatorContainer div .selectors {
+            background-color: white;
+            border: black solid .5px;
+            margin: 2px;
+            padding: 10px;
+            border-radius: 30px;
+            width: 200px; }
+  body .sectionCalculator {
     display: flex;
     justify-content: center; }
-    .calculator__container .calculator__button .button__style {
+    body .sectionCalculator .buttonCalculate {
       background-color: #019980;
       border-radius: 30px;
-      color: white;
       padding: 15px;
-      border: none;
-      font-weight: 600; }
-      .calculator__container .calculator__button .button__style:hover {
+      font-size: .9rem;
+      font-weight: 700;
+      width: 300px;
+      text-align: center;
+      margin: 10px;
+      color: white;
+      border: none; }
+      body .sectionCalculator .buttonCalculate:hover {
         background-color: #6f14ed; }
+  body section .resultMessage {
+    text-align: center;
+    margin: 10px auto; }
+    body section .resultMessage h2 {
+      font-size: 2rem; }
+    body section .resultMessage h4 {
+      font-size: 1.2rem; }
+    body section .resultMessage p {
+      font-size: .9rem;
+      margin: 5px; }
+  body section .resetButton {
+    text-decoration: underline;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: #6d17b3;
+    border: transparent;
+    margin: auto; }
+  body section .noDisplay {
+    display: none; }
+
+@media screen and (max-width: 934px) {
+  body .mainContainer {
+    width: 80%; } }
+
+@media screen and (max-width: 800px) {
+  body .mainContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 90%; }
+    body .mainContainer .titleContainer {
+      text-align: center;
+      border-right: none;
+      width: 80%;
+      padding: 20px; }
+      body .mainContainer .titleContainer p {
+        font-weight: 300;
+        text-align: center; }
+    body .mainContainer .inputsContainer {
+      width: 60%;
+      padding: 15px; }
+      body .mainContainer .inputsContainer .nameContainer {
+        flex-direction: column; }
+      body .mainContainer .inputsContainer .calculatorContainer div {
+        flex-direction: column; } }
 
 .result {
   display: flex;
@@ -584,74 +587,120 @@ div div div div .fats__bg {
 .mainShop {
   width: 90%;
   margin: auto; }
-  .mainShop .basket__container {
-    display: flex;
-    justify-content: flex-end;
-    margin: 30px; }
-    .mainShop .basket__container .basket__items {
-      display: flex;
-      width: fit-content;
-      padding: 10px;
-      border: black solid 0.5px;
-      border-radius: 5px; }
-      .mainShop .basket__container .basket__items p {
-        margin: 5px; }
-      .mainShop .basket__container .basket__items svg {
-        margin: 5px; }
-  .mainShop .shop__main__container {
-    display: flex;
-    margin: 15px;
-    padding: 15px;
-    justify-content: space-around;
-    align-items: center; }
-    .mainShop .shop__main__container .shop__picture {
-      width: 50%; }
-      .mainShop .shop__main__container .shop__picture img {
-        width: 100%; }
-    .mainShop .shop__main__container .shop__title {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      padding: 30px;
-      align-items: flex-end;
-      text-align: justify; }
-      .mainShop .shop__main__container .shop__title p {
-        color: grey; }
-      .mainShop .shop__main__container .shop__title div .buy__now__style {
-        background-color: yellow;
-        padding: 15px;
+  .mainShop .mainShopContainer {
+    display: flex; }
+    .mainShop .mainShopContainer .basket__container {
+      width: 30%;
+      display: block;
+      margin: 30px;
+      color: white;
+      background-color: #005648;
+      height: 500px;
+      overflow-y: scroll;
+      padding: 20px; }
+      .mainShop .mainShopContainer .basket__container .basket__items {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 5px;
         border: none;
-        text-decoration: none;
-        font-size: 1rem;
-        color: black;
-        font-weight: 600;
+        background-color: white;
+        color: #005648;
         border-radius: 30px; }
-        .mainShop .shop__main__container .shop__title div .buy__now__style:hover {
+        .mainShop .mainShopContainer .basket__container .basket__items p {
+          margin: 5px; }
+        .mainShop .mainShopContainer .basket__container .basket__items svg {
+          margin: 5px; }
+      .mainShop .mainShopContainer .basket__container .cart-item .item-info {
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: white solid 1px; }
+        .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-details {
+          list-style: square;
+          display: flex;
+          flex-direction: column; }
+          .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-details .item-name {
+            font-weight: bold;
+            font-size: 1rem; }
+          .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-details .item-price {
+            font-size: .8rem;
+            font-weight: lighter; }
+          .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-details .item-quantity {
+            font-size: .8rem;
+            font-weight: lighter; }
+        .mainShop .mainShopContainer .basket__container .cart-item .item-info .remove-item {
+          width: fit-content;
+          font-size: 1rem;
+          border: none;
+          background-color: transparent;
+          color: white;
+          padding: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      .mainShop .mainShopContainer .basket__container .cart-total {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.3rem; }
+      .mainShop .mainShopContainer .basket__container .checkOut button {
+        display: flex;
+        margin: auto;
+        background-color: yellow;
+        border: none;
+        padding: 10px;
+        text-align: center;
+        border-radius: 30px;
+        font-weight: bold; }
+        .mainShop .mainShopContainer .basket__container .checkOut button:hover {
           background-color: #6f14ed;
           color: white; }
-    .mainShop .shop__main__container .shop__icons {
+      .mainShop .mainShopContainer .basket__container #noItems {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        font-weight: normal; }
+    .mainShop .mainShopContainer .shop__main__container {
+      width: 70%;
       display: flex;
-      justify-content: flex-end;
-      margin-top: 10px;
-      margin-bottom: 10px; }
-      .mainShop .shop__main__container .shop__icons .heart {
-        margin: 5px;
-        padding: 10px; }
-        .mainShop .shop__main__container .shop__icons .heart:hover {
-          color: red;
-          cursor: pointer; }
-      .mainShop .shop__main__container .shop__icons .cart {
-        margin: 5px;
-        padding: 10px; }
-        .mainShop .shop__main__container .shop__icons .cart:hover {
-          color: #026202;
-          cursor: pointer; }
-      .mainShop .shop__main__container .shop__icons .share {
-        margin: 5px;
-        padding: 10px; }
-        .mainShop .shop__main__container .shop__icons .share:hover {
-          color: #0502a3;
-          cursor: pointer; }
+      margin: 15px;
+      padding: 15px;
+      justify-content: space-around;
+      align-items: center; }
+      .mainShop .mainShopContainer .shop__main__container .shop__picture {
+        width: 50%; }
+        .mainShop .mainShopContainer .shop__main__container .shop__picture img {
+          width: 100%; }
+      .mainShop .mainShopContainer .shop__main__container .shop__title {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: flex-end;
+        text-align: justify; }
+        .mainShop .mainShopContainer .shop__main__container .shop__title p {
+          color: grey; }
+        .mainShop .mainShopContainer .shop__main__container .shop__title div .buy__now__style {
+          background-color: #019980;
+          padding: 15px;
+          border: none;
+          text-decoration: none;
+          font-size: 1rem;
+          color: white;
+          font-weight: 600;
+          border-radius: 30px;
+          width: 140px; }
+          .mainShop .mainShopContainer .shop__main__container .shop__title div .buy__now__style:hover {
+            background-color: #6f14ed;
+            color: white; }
+        .mainShop .mainShopContainer .shop__main__container .shop__title .shop__variations .selectors {
+          padding: 10px;
+          border-radius: 30px;
+          margin-bottom: 10px;
+          width: 140px; }
+          .mainShop .mainShopContainer .shop__main__container .shop__title .shop__variations .selectors:hover {
+            background-color: whitesmoke; }
   .mainShop .shop__primary__container .product__description {
     background-color: whitesmoke;
     display: block;
@@ -1047,18 +1096,24 @@ footer {
           text-align: center; }
   .mainShop {
     width: 100%; }
-    .mainShop .shop__main__container {
-      display: block; }
-      .mainShop .shop__main__container .shop__picture {
-        width: 100%; }
-        .mainShop .shop__main__container .shop__picture img {
+    .mainShop .mainShopContainer {
+      flex-direction: column; }
+      .mainShop .mainShopContainer .basket__container {
+        width: 90%;
+        height: 300px; }
+      .mainShop .mainShopContainer .shop__main__container {
+        width: 90%;
+        flex-direction: column; }
+        .mainShop .mainShopContainer .shop__main__container .shop__picture {
           width: 100%; }
-      .mainShop .shop__main__container .shop__title {
-        width: 100%;
-        align-items: flex-start; }
-      .mainShop .shop__main__container .shop__icons {
-        display: flex;
-        justify-content: flex-start; }
+          .mainShop .mainShopContainer .shop__main__container .shop__picture img {
+            width: 100%; }
+        .mainShop .mainShopContainer .shop__main__container .shop__title {
+          width: 100%;
+          align-items: flex-start; }
+        .mainShop .mainShopContainer .shop__main__container .shop__icons {
+          display: flex;
+          justify-content: flex-start; }
     .mainShop .shop__primary__container .product__description {
       background-color: whitesmoke;
       display: block;

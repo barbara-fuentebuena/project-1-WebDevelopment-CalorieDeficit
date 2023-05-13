@@ -80,7 +80,7 @@ main{
     margin: 50px;
     display: grid;
     grid-template-columns: repeat (6, 1fr);
-    grid-template-rows: repeat (3, 1fr);
+    grid-template-rows: repeat (3, auto);
     grid-template-areas:
     "recipes recipes recipes recipes recipes recipes"
     "cat1 cat1 cat2 cat2 cat3 cat3"
