@@ -136,4 +136,3 @@ calculateButton.addEventListener("click", ()=>{
 
 //get usersArray from localStorage 
 const usersArray = JSON.parse(localStorage.getItem("usersArray")) || []
-
