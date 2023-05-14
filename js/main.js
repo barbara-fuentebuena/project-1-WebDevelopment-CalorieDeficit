@@ -1,4 +1,3 @@
-
 //render calculate button to calculate the IBM
 const calculateButton = document.getElementById("calculateButton");
 
@@ -137,4 +136,3 @@ calculateButton.addEventListener("click", ()=>{
 
 //get usersArray from localStorage 
 const usersArray = JSON.parse(localStorage.getItem("usersArray")) || []
-

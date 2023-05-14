@@ -140,23 +140,31 @@
                     display: flex;
                     justify-content: space-between;
                     border-bottom: white solid 1px;
-                    .item-details{
-                        list-style: square;
+                    .item-info-main{
                         display: flex;
-                        flex-direction: column;
-                        .item-name{    
-                            font-weight: bold;
-                            font-size: 1rem;
+                        .item-details{
+                            list-style: square;
+                            display: flex;
+                            flex-direction: column;
+                            .item-name{    
+                                font-weight: bold;
+                                font-size: 1rem;
+                            }
+                            .item-price{
+                                font-size: .8rem;
+                                font-weight: lighter;
+                            }
+                            .item-quantity{
+                                font-size: .8rem;
+                                font-weight: lighter;
+                            }
                         }
-                        .item-price{
-                            font-size: .8rem;
-                            font-weight: lighter;
-                        }
-                        .item-quantity{
-                            font-size: .8rem;
-                            font-weight: lighter;
+                        .imgCart{
+                            width: 100px;
+                            margin-right: 10px;
                         }
                     }
+                    
                     .remove-item{
                         width: fit-content;
                         font-size: 1rem;
@@ -238,6 +246,47 @@
                             color: white;
                         }
                     }
+                }
+                .postalCodeContainer{
+                    padding: 5px;
+                    margin-top: 10px;
+                    border-top: solid rgb(186, 184, 184) 1px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .countrySelector{
+                        margin-right: 20px;
+                        border-radius: 30px;
+                        border: none;
+                        width: 100px;
+
+                    }
+                    .postaCodeInputContainer{
+                        padding-top: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        .postalCodeInput{
+                            padding: 10px;
+                            border-radius: 30px;
+                            border: solid rgb(186, 184, 184) 1px;
+                            width: 220px;
+                        }
+                        .shippingButton{
+                            padding: 10px;
+                            border-radius: 30px;
+                            border: none;
+                            width: 220px;
+                            margin-top: 10px;
+                            &:hover{
+                                background-color: $color_purple;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .resultShipping{
+                    margin-right: 70px;
                 }
                 .shop__variations{
                     .selectors{

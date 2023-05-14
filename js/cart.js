@@ -1,3 +1,17 @@
+//function for errorMessage with toastify
+const errorMessageToastify = (message) =>{
+    Toastify({
+        text: message,
+        duration: 2000,
+        gravity: "top",
+        position: "right",
+        style: {
+            background: "red",
+            color: "white",
+        },
+    }).showToast()
+}
+
 //Create new product
 class Product {
     constructor(id, name, price, type, img) {
@@ -18,8 +32,8 @@ const shakerYellow = new Product(4, "Shaker", 50, "Yellow", "../img/shakers.png"
 const wheyProteinVanilla = new Product(10, "Whey Protein", 250, "Vanilla", "../img/whey-protein-banner.jpeg");
 const wheyProteinChocolate = new Product(11, "Whey Protein", 250, "Chocolate", "../img/whey-protein-banner.jpeg");
 const wheyProteinStrawberry = new Product(12, "Whey Protein", 250, "Strawberry", "../img/whey-protein-banner.jpeg");
-const bmiScaleWhite = new Product(20, "BMI Scale", 1500, "White", "../img/bmi-scales.png");
-const bmiScaleBlack = new Product(21, "BMI Scale", 1500, "Black", "../img/bmi-scales.png");
+const bmiScaleWhite = new Product(20, "BMI Scale", 1500, "White", "../img/scales-banner.jpeg");
+const bmiScaleBlack = new Product(21, "BMI Scale", 1500, "Black", "../img/scales-banner.jpeg");
 
 let selectProduct = "";
 //array of product in the cart
@@ -48,6 +62,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedColor === "4") {
         selectProduct = shakerYellow;
         selectProduct.id = 4;
+        } else if (selectedColor === "none"){
+            selectProduct = new Product();
         }
     });
     } else if (window.location.href.includes("shop-whey-protein.html")){
@@ -63,6 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (selectedFlavour === "7") {
         selectProduct = wheyProteinStrawberry;
         selectProduct.id = 12;
+        } else if (selectedFlavour === "none"){
+            selectProduct = new Product();
         }
     });
     } else if (window.location.href.includes("shop-bmi-scales.html")){
@@ -75,13 +93,19 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (selectedColor === "9") {
             selectProduct = bmiScaleBlack;
             selectProduct.id = 21;
+            } else if (selectedColor === "none"){
+                selectProduct = new Product();
             }
         })
     }
     //create event to the button "ADD TO CART"
     addToCartBtn.addEventListener("click", function() {
-        addToCart(selectProduct);
-        updateCart();
+        if(!selectProduct || !selectProduct.id){
+            errorMessageToastify("You must select a product.")
+        }else{
+            addToCart(selectProduct);
+            updateCart();
+        }
     });
     //function to add products to the cart
     function addToCart(product) {
@@ -91,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const existingItem = cartItems.find(item => item.id === product.id);
         if (existingItem) {
         existingItem.quantity += 1;
-        } else {
+        }else {
         cartItems.push(product);
         }
         
@@ -100,48 +124,61 @@ document.addEventListener("DOMContentLoaded", function() {
     //function to show the updated cart
     let itemPrice = 0;
     let totalPrice = 0;
+    //function to show the updated cart
     function updateCart() {
         cartItems = localStorage.getItem("cartItems");
         cartItems = cartItems ? JSON.parse(cartItems) : [];
-        
+
         cartContainer.innerHTML = "";
-        
+
+        let itemPrice = 0;
+        let totalPrice = 0;
+
         if (cartItems.length === 0) {
-        cartContainer.innerHTML = `<h6 id="noItems">No items in cart.</h6>`;
+            cartContainer.innerHTML = `<h6 id="noItems">No items in cart.</h6>`;
+            //total price when the cat is empty
+            totalPrice = 0; 
         } else {
             cartItems.forEach(item => {
-                const cartItem = document.createElement("div");
-                cartItem.classList.add("cart-item");
-                cartItem.innerHTML = `
+                if (item && item.name) {
+                    const cartItem = document.createElement("div");
+                    cartItem.classList.add("cart-item");
+                    cartItem.innerHTML = `
                         <div class="item-info">
-                            <li class="item-details">
+                            <div class="item-info-main">
+                                <img src="${item.img}" class="imgCart">
+                                <li class="item-details">
                                 <h5 class="item-name">${item.name} - ${item.type}</h5>
                                 <h6 class="item-price">DKK ${item.price}</h6>
-                                <h6 class="item-quantity">Quantity: ${item.quantity}</h6>  
-                            </li>
+                                <h6 class="item-quantity">Quantity: ${item.quantity}</h6>
+                                </li>
+                            </div>
                             <button class="remove-item" data-id="${item.id}"> X </button>
                         </div>`;
                 //update total amount $$
                 itemPrice = item.price * item.quantity;
                 totalPrice += itemPrice;
                 cartContainer.appendChild(cartItem);
-            });
-            //show total amount $$ of the cart
-            const totalElement = document.createElement("p");
-            totalElement.classList.add("cart-total");
-            totalElement.textContent = "Total: DKK " + totalPrice;
-            cartContainer.appendChild(totalElement);
-            //event to button to remove product from the cart
-            const removeButtons = document.getElementsByClassName("remove-item");
-            [...removeButtons].forEach(button => {
-                button.addEventListener("click", function() {
-                const itemId = parseInt(button.dataset.id);
-                removeItem(itemId);
-                updateCart();
-                });
-            });
-        }
+            }
+        });
     }
+    //show total amount $$ of the cart
+    const totalElement = document.createElement("p");
+    totalElement.classList.add("cart-total");
+    totalElement.textContent = "Total: DKK " + totalPrice;
+    cartContainer.appendChild(totalElement);
+
+    //event to button to remove product from the cart
+    const removeButtons = document.getElementsByClassName("remove-item");
+    [...removeButtons].forEach(button => {
+        button.addEventListener("click", function() {
+            const itemId = parseInt(button.dataset.id);
+            removeItem(itemId);
+            updateCart();
+        });
+    });
+}
+
     //call to updateCart function
     updateCart();
     //checkout function
@@ -189,3 +226,4 @@ document.addEventListener("DOMContentLoaded", function() {
     updateCart();
     }
 });
+
