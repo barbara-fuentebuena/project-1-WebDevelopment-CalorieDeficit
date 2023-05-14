@@ -1,4 +1,3 @@
-
 //render calculate button to calculate the IBM
 const calculateButton = document.getElementById("calculateButton");
 

@@ -188,7 +188,7 @@ main div div div .banner2 {
       padding: 0.5rem;
       width: 17rem;
       background-color: white; }
-    .newsletter #newsletter .containernews3 input {
+    .newsletter #newsletter .containernews3 button {
       margin-top: 3%;
       font-size: 1rem;
       background-color: grey;
@@ -199,7 +199,7 @@ main div div div .banner2 {
       width: 10rem;
       font-size: 1rem;
       font-weight: bold; }
-      .newsletter #newsletter .containernews3 input:hover {
+      .newsletter #newsletter .containernews3 button:hover {
         background-color: #6f14ed;
         color: white; }
 
@@ -617,19 +617,24 @@ body {
         display: flex;
         justify-content: space-between;
         border-bottom: white solid 1px; }
-        .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-details {
-          list-style: square;
-          display: flex;
-          flex-direction: column; }
-          .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-details .item-name {
-            font-weight: bold;
-            font-size: 1rem; }
-          .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-details .item-price {
-            font-size: .8rem;
-            font-weight: lighter; }
-          .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-details .item-quantity {
-            font-size: .8rem;
-            font-weight: lighter; }
+        .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-info-main {
+          display: flex; }
+          .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-info-main .item-details {
+            list-style: square;
+            display: flex;
+            flex-direction: column; }
+            .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-info-main .item-details .item-name {
+              font-weight: bold;
+              font-size: 1rem; }
+            .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-info-main .item-details .item-price {
+              font-size: .8rem;
+              font-weight: lighter; }
+            .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-info-main .item-details .item-quantity {
+              font-size: .8rem;
+              font-weight: lighter; }
+          .mainShop .mainShopContainer .basket__container .cart-item .item-info .item-info-main .imgCart {
+            width: 100px;
+            margin-right: 10px; }
         .mainShop .mainShopContainer .basket__container .cart-item .item-info .remove-item {
           width: fit-content;
           font-size: 1rem;
@@ -694,6 +699,39 @@ body {
           .mainShop .mainShopContainer .shop__main__container .shop__title div .buy__now__style:hover {
             background-color: #6f14ed;
             color: white; }
+        .mainShop .mainShopContainer .shop__main__container .shop__title .postalCodeContainer {
+          padding: 5px;
+          margin-top: 10px;
+          border-top: solid #bab8b8 1px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center; }
+          .mainShop .mainShopContainer .shop__main__container .shop__title .postalCodeContainer .countrySelector {
+            margin-right: 20px;
+            border-radius: 30px;
+            border: none;
+            width: 100px; }
+          .mainShop .mainShopContainer .shop__main__container .shop__title .postalCodeContainer .postaCodeInputContainer {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; }
+            .mainShop .mainShopContainer .shop__main__container .shop__title .postalCodeContainer .postaCodeInputContainer .postalCodeInput {
+              padding: 10px;
+              border-radius: 30px;
+              border: solid #bab8b8 1px;
+              width: 220px; }
+            .mainShop .mainShopContainer .shop__main__container .shop__title .postalCodeContainer .postaCodeInputContainer .shippingButton {
+              padding: 10px;
+              border-radius: 30px;
+              border: none;
+              width: 220px;
+              margin-top: 10px; }
+              .mainShop .mainShopContainer .shop__main__container .shop__title .postalCodeContainer .postaCodeInputContainer .shippingButton:hover {
+                background-color: #6f14ed;
+                color: white; }
+        .mainShop .mainShopContainer .shop__main__container .shop__title .resultShipping {
+          margin-right: 70px; }
         .mainShop .mainShopContainer .shop__main__container .shop__title .shop__variations .selectors {
           padding: 10px;
           border-radius: 30px;
